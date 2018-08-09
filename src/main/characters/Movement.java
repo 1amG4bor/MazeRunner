@@ -1,4 +1,6 @@
-package main;
+package main.characters;
+
+import main.logic.Board;
 
 public interface Movement {
     void moveUp(Board Board);

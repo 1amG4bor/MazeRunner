@@ -2,12 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/gfx/GameLevels.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ant.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/characters/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/characters/AnimalActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/characters/CharacterUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/characters/DefaultActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/characters/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/characters/HumanActions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/characters/TestEnemy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/items/weapons/Weapon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/logic/Calculation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Board$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/CellType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Direction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Level$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MazeRunner/main/Level$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MazeRunner/main/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Movement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MazeRunner/main/gfx/Textures.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MazeRunner/main/gfx/Textures.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/CellType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/CellType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/characters/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/characters/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/logic/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/gfx/Textures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/gfx/Textures.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,91 +87,264 @@
     <session id="-757672679">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="56" />
+          <entry key="dummy" value="20" />
+          <entry key="java" value="1487" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="56" />
+          <entry key="JAVA" value="1487" />
+          <entry key="PLAIN_TEXT" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="1" />
-          <entry key="java" value="22" />
+          <entry key="java" value="47" />
+          <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="22" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="47" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication" />
+    <favorites_list name="JavaFxApplication">
+      <favorite_root url="file://$PROJECT_DIR$" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/src" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/src/main" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/src/main/gfx" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/src/main/gfx/Textures.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/src/main/gfx/GameLevels.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/src/main/items" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/src/main/items/weapons" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/src/main/items/weapons/Weapon.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/src/main/Main.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/main/Board.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/main/Level.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/main/characters" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/src/main/characters/Human.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/src/main/characters/Animal.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/src/main/characters/Player.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/src/main/characters/Movement.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/src/main/characters/HumanActions.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/src/main/characters/AnimalActions.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/src/main/characters/CharacterUnit.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/src/main/characters/DefaultActions.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/src/main/CellType.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/main/Position.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/main/Direction.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/src/images" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/src/images/exit.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/images/road.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/images/user.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/images/wall.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/images/entrance.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/src/sample" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/src/sample/sample.fxml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/src/sample/Controller.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/.idea" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/.idea/vcs.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/misc.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/artifacts" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/.idea/artifacts/JavaFXApp.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/.idea/gradle.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/modules.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/compiler.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/encodings.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/workspace.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/MazeRunner.iml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/uiDesigner.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/description.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/LICENSE" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/note.ods" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/pictures" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/pictures/bg.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/pictures/bg2.jpeg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/pictures/mapbg.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/road.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_0.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_1.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_2.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_3.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_4.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_5.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_6.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_7.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_8.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_9.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/redNum/Piros_Ki.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/0.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/1.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/2.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/3.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/4.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/5.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/6.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/7.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/8.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/9.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/smallNum/blank.BMP" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/Keret_1.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/Keret_2.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/Keret_3.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/Keret_4.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/Kek_Exit.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/KeretD_1.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/KeretD_2.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/KeretD_3.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/KeretD_4.bmp" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/CH_E_Alert.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/Kek_Level1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/toReDraw/CH_E_AlertActive.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/e_grate_grey.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/e_stone_wall.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/e_tile_brown.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/e_floor_marble.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/e_fieldstone_tan.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/texture_IDEAS/e_fieldstone_gray.jpg" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/X.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/axe.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/bow.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/gem.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/axe2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/bow2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/coin.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/star.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/tome.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/wand.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/armor.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/boots.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/heart.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/sword.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/tools.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/wand2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/dagger.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/gemRed.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/hammer.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/helmet.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/potion.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/scroll.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/shield.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/sword2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/armor 2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/dagger2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/hammer2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/helmet2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/leather.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/potion2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/potion3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/potion4.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/shield2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/backpack.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/document.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/envelope.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/gemGreen.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/leather2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/necklace.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/axeDouble.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/woodSword.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/axeDouble2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/shieldSmall.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/shield_semi.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/shield_wood.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/pictures/fantasyIconPack_64x64/shieldSmall2.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/.gitignore" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/documentation" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/documentation/main" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/documentation/main/gfx" module="MazeRunner" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/documentation/main/gfx/Textures.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/documentation/main/Main.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/documentation/main/Board.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/documentation/main/CellType.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/documentation/main/Movement.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/documentation/main/Position.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/documentation/phase_1.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/documentation/testModel.xmi" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/documentation/mazeRunner(consoleVersion).png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/MazeRunner.iml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+            <state relative-caret-position="435">
+              <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#109#110#0" expanded="true" />
-                <element signature="e#133#134#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Level.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#137#138#0" expanded="true" />
+                <element signature="e#161#162#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/gfx/Textures.java">
+        <entry file="file://$PROJECT_DIR$/src/main/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="38" column="24" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="24" />
+            <state relative-caret-position="433">
+              <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1041#1042#0" expanded="true" />
+                <element signature="e#1131#1132#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CellType.java">
+        <entry file="file://$PROJECT_DIR$/src/main/logic/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            <state relative-caret-position="915">
+              <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#7582#7583#0" expanded="true" />
+                <element signature="e#7629#7630#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,6 +355,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -165,6 +363,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>getv</find>
+      <find>isPlaying</find>
+      <find>move</find>
+      <find>Jpanel</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -184,14 +385,30 @@
         <option value="$PROJECT_DIR$/src/main/gfx/Level.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/Direction.java" />
+        <option value="$PROJECT_DIR$/src/Character.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/Character.java" />
         <option value="$PROJECT_DIR$/src/main/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/HumanAction.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/AnimalActions.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/DefaultActions.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/HumanActions.java" />
+        <option value="$PROJECT_DIR$/src/main/items/weapons/Weapon.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/Human.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/Animal.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/CharacterUnit.java" />
+        <option value="$PROJECT_DIR$/src/main/characters/TestEnemy.java" />
+        <option value="$PROJECT_DIR$/src/main/gfx/Textures.java" />
         <option value="$PROJECT_DIR$/src/main/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/logic/Calculation.java" />
+        <option value="$PROJECT_DIR$/src/main/logic/Board.java" />
         <option value="$PROJECT_DIR$/src/main/Level.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="27" />
     <option name="width" value="1600" />
     <option name="height" value="873" />
@@ -205,6 +422,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,21 +448,12 @@
               <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="gfx" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="logic" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,9 +465,10 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533636102545" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533824445017" />
     <property name="dynamic.classpath" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -270,7 +482,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -289,13 +501,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="MazeRunner" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="main.logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -303,18 +515,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="MazeRunner" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.*" />
+          <option name="PATTERN" value="main.items.weapons.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -354,13 +564,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Main (1)" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -381,35 +587,41 @@
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="1302000" />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25225225" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.26962677" />
       <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info id="Favorites" order="2" weight="0.32947233" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32839838" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39973083" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2920592" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.7510094" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32974428" />
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32974428" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -417,6 +629,9 @@
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
@@ -465,20 +680,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Movement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Runnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="593">
@@ -501,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/gfx/GameLevels.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -515,61 +709,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Position.java">
+    <entry file="file://$PROJECT_DIR$/src/main/characters/Movement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc;n#getX#0;n#Position#0" />
-            <element signature="e#299#314#0" />
-            <element signature="e#448#464#0" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/characters/AnimalActions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#109#110#0" expanded="true" />
-            <element signature="e#133#134#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Board.java">
+    <entry file="file://$PROJECT_DIR$/src/main/characters/HumanActions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="24" />
+        <state relative-caret-position="75">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/characters/Human.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="78" selection-start-line="4" selection-end-line="5" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CellType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/characters/Animal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/characters/DefaultActions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/items/weapons/Weapon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/characters/Test.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/gfx/Textures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/skull.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/logic/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/logic/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Level.java">
+    <entry file="file://$PROJECT_DIR$/src/main/logic/CellType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/characters/CharacterUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/gfx/Textures.java">
+    <entry file="file://$PROJECT_DIR$/src/main/characters/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        <state relative-caret-position="150">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/characters/TestEnemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/logic/Calculation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#161#162#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/logic/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7582#7583#0" expanded="true" />
+            <element signature="e#7629#7630#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

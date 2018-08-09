@@ -9,6 +9,7 @@ public enum Textures {
     ENTRANCE(new ImageIcon("src/images/entrance.png")),
     EXIT    (new ImageIcon("src/images/exit.png")),
     PLAYER  (new ImageIcon("src/images/user.png")),
+    FOE     (new ImageIcon("src/images/skull.png")),
     _NULL   (new ImageIcon("src/images/_.JPG"));
 
     public ImageIcon image;

@@ -7,11 +7,21 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
+
+import main.characters.CharacterUnit;
+import main.characters.Player;
+import main.characters.TestEnemy;
 import main.gfx.*;
+import main.logic.Board;
+import main.logic.CellType;
+import main.logic.Direction;
+import main.logic.Position;
 
 public class Level extends JPanel implements KeyListener, ActionListener {
-    private ArrayList<Board> levelList = new ArrayList<>();
+    public Player player;
+    public ArrayList<CharacterUnit> enemies;
     private GameLevels levelType;
+    private ArrayList<Board> levelList = new ArrayList<>();
     int dx = 0;
     int dy = 0;
     private Timer timer;
@@ -23,6 +33,10 @@ public class Level extends JPanel implements KeyListener, ActionListener {
         createNewMap(newLevel);
         timer = new Timer(DELAY, this);
         timer.start();
+    }
+
+    private void addEnemies() {
+        enemies.add(new TestEnemy(new Position(3,3), Direction.NORTH,100,10,true));
     }
 
     private Board getCurrentLevel() {
@@ -44,8 +58,15 @@ public class Level extends JPanel implements KeyListener, ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (getCurrentLevel().isPlaying == true) {
+        if (getCurrentLevel().levelInGame == true) {
             move();
+            if (player.getPosition().isEqual(enemies.get(0).getPosition())) {
+                JOptionPane.showMessageDialog(null, "You've died!");
+                setCharacters();
+            }
+            if (player.getPosition().isEqual(getCurrentLevel().getFixPositions().get(1))) {
+                getCurrentLevel().levelInGame=false;
+            }
         } else {
             timer.stop();
             createNewMap(levelType.getNext());
@@ -60,7 +81,13 @@ public class Level extends JPanel implements KeyListener, ActionListener {
         requestFocusInWindow();
         levelType = newLevel;
         levelList.add(newLevel(levelType.getWidth(), levelType.getHeigth()));
+        setCharacters();
+    }
 
+    private void setCharacters() {
+        player = new Player(getCurrentLevel().getFixPositions().get(2), getCurrentLevel().getStartSide().getOpposite());
+        enemies = new ArrayList<>();
+        addEnemies();
     }
 
     // Rendering the map
@@ -76,7 +103,6 @@ public class Level extends JPanel implements KeyListener, ActionListener {
         int h = getCurrentLevel().getHeight();
         int step = 40;
         //Header
-        g2d.setBackground(Color.yellow);
         g2d.setColor(new Color(1, 42, 167));
         g2d.fillRect(20, 5, (int) size.getWidth()-40, 40);
         g2d.setColor(Color.RED);
@@ -86,12 +112,16 @@ public class Level extends JPanel implements KeyListener, ActionListener {
         // Board rendering
         for (int y = 0; y < h; y++) {
             for (int x = 0; x < w; x++) {
-                //g2d.setColor(analyzeMap(x, y));
-                //g2d.fillRect(x * step +20, y * step + 50, step, step);
-                if (getCurrentLevel().getValue(new Position(y, x)) == CellType.PLAYER) {
-                    g2d.drawImage(Textures.ROAD.getImg(), x * step +20, y * step + 50, null);
-                }
                 g2d.drawImage(getImage(x, y), x * step +20, y * step + 50, null);
+                if (player.getPosition().isEqual(new Position(y, x))) {
+                    g2d.drawImage(Textures.PLAYER.getImg(), x * step +20, y * step + 50, null);
+                }
+                for (CharacterUnit foe: enemies) {
+                    if (foe.getPosition().isEqual(new Position(y, x))) {
+                        g2d.drawImage(Textures.FOE.getImg(), x * step +20, y * step + 50, null);
+                    }
+                }
+
             }
         }
     }
@@ -137,9 +167,9 @@ public class Level extends JPanel implements KeyListener, ActionListener {
         }
         if (key == KeyEvent.VK_F1) {
             Position jump = getCurrentLevel().cheat();
-            getCurrentLevel().modifyMapCell(getCurrentLevel().player.getPosition(),CellType.ROAD);
-            getCurrentLevel().player.setPosition(jump);
-            getCurrentLevel().modifyMapCell(getCurrentLevel().player.getPosition(),CellType.PLAYER);
+            getCurrentLevel().modifyMapCell(player.getPosition(), CellType.ROAD);
+            player.setPosition(jump);
+            getCurrentLevel().modifyMapCell(player.getPosition(),CellType.PLAYER);
             repaint();
         }
     }
@@ -169,16 +199,16 @@ public class Level extends JPanel implements KeyListener, ActionListener {
     public void move() {
         if (dy != 0) {
             if (dy < 0) {
-                getCurrentLevel().player.moveUp(getCurrentLevel());
+                player.moveUp(getCurrentLevel());
             } else {
-                getCurrentLevel().player.moveDown(getCurrentLevel());
+                player.moveDown(getCurrentLevel());
             }
         }
         if (dx != 0) {
             if (dx < 0) {
-                getCurrentLevel().player.moveLeft(getCurrentLevel());
+                player.moveLeft(getCurrentLevel());
             } else {
-                getCurrentLevel().player.moveRight(getCurrentLevel());
+                player.moveRight(getCurrentLevel());
             }
         }
         repaint();

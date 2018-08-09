@@ -1,4 +1,4 @@
-package main;
+package main.logic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,13 +8,14 @@ import java.util.Random;
 public class Board {
     private int width;
     private int height;
-    private int wallWidth = 1;
-    private int roadWidth = 1;
+    // todo: private int wallWidth = 1; // for wider wall in gfx-phase
+    // todo: private int roadWidth = 1; // for wider road in gfx-phase
     private CellType[][] map;
     private ArrayList<Position> fixPositions;
     private Direction startSide;
-    public boolean isPlaying = false;
-    public Player player = new Player(new Position(0, 0));
+    public boolean levelInGame;
+    //public Player player = new Player(new Position(0, 0), Direction.NORTH);
+
     // ### Constructor
     public Board(int fieldWidth, int fieldHeight) {
         this.width = fieldWidth * 2 + 1;
@@ -22,7 +23,7 @@ public class Board {
         map = new CellType[height][width];
         createMap();
         System.out.println(map);
-        isPlaying=true;
+        levelInGame =true;
     }
     // ### Getters & Setters
     public int getWidth() {
@@ -31,15 +32,17 @@ public class Board {
     public int getHeight() {
         return height;
     }
+    public Direction getStartSide() { return startSide; }
+
     // SET a value to a specific map-coordination
     public void modifyMapCell(Position cellPosition, CellType value) {
         map[cellPosition.getY()][cellPosition.getX()] = value;
     }
-    // getImg a value from a specific map-coordination
+    // get the value from a specific map-coordination
     public CellType getValue(Position position) {
         return map[position.getY()][position.getX()];
     }
-    // getImg the fix positions from the map //entrance, exit
+    // get the fix positions from the map (entrance, exit, startPosition)
     public ArrayList<Position> getFixPositions() {
         return fixPositions;
     }
@@ -65,11 +68,12 @@ public class Board {
             }
         }
         Position drawPosition = generateDoors();
-        player.setPosition(drawPosition.clone());   //initiate the start position of the player
+        fixPositions.add(drawPosition.clone());
+        // todo - player.setDirection(startSide.getOpposite());
         map[drawPosition.getY()][drawPosition.getX()]= CellType.ROAD; // first cell of roadmap
         nextStep(drawPosition);
         drawWalls();
-        modifyMapCell(player.getPosition(),CellType.PLAYER);
+        // todo - modifyMapCell(player.getPosition(),CellType.PLAYER);
     }
 
     // Recursive map generating
@@ -200,7 +204,7 @@ public class Board {
         return Direction.EAST;
     }
 
-    // getImg a random int value between @min and @max (both inclusive)
+    // get a random int value between @min and @max (both inclusive)
     private int randomRange (int min, int max) {
         if (min > max) {
             int t = min;
