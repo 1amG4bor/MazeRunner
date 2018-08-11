@@ -10,7 +10,11 @@ public enum Textures {
     EXIT    (new ImageIcon("src/images/exit.png")),
     PLAYER  (new ImageIcon("src/images/user.png")),
     FOE     (new ImageIcon("src/images/skull.png")),
-    _NULL   (new ImageIcon("src/images/_.JPG"));
+    _BG     (new ImageIcon("src/images/bg.png")),
+    _MENU   (new ImageIcon("src/images/menu.png")),
+    _BOARD  (new ImageIcon("src/images/gameboard.png")),
+    _MAP    (new ImageIcon("src/images/mapbg.png"));
+
 
     public ImageIcon image;
     private Dimension dimension = new Dimension(90,90);

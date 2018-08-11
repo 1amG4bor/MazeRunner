@@ -1,4 +1,4 @@
-package main.characters;
+package main.characters.interfaces;
 
 public interface AnimalActions {
     void bite();

@@ -1,11 +1,11 @@
 package main.gfx;
 
 public enum GameLevels {
-    LEVEL_1 ( 3, 3, "Level-1:"),
-    LEVEL_2 ( 4, 4, "Level-2:"),
-    LEVEL_3 ( 5, 5, "Level-3:"),
-    LEVEL_4 ( 6, 6, "Level-4:"),
-    LEVEL_5 ( 8, 8, "Level-5:"),
+    LEVEL_1 ( 5, 5, "Level-1:"),
+    LEVEL_2 ( 6, 6, "Level-2:"),
+    LEVEL_3 ( 7, 7, "Level-3:"),
+    LEVEL_4 ( 8, 8, "Level-4:"),
+    LEVEL_5 ( 9, 9, "Level-5:"),
     LEVEL_6 (10,10, "Level-6:"),
     LEVEL_7 (12,12, "Level-7:"),
     LEVEL_8 (15,15, "Level-8:"),

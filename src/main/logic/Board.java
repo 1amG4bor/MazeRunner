@@ -2,10 +2,9 @@ package main.logic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Random;
 
 public class Board {
+    private Calculation calc = Calculation.getInstance();
     private int width;
     private int height;
     // todo: private int wallWidth = 1; // for wider wall in gfx-phase
@@ -47,7 +46,7 @@ public class Board {
         return fixPositions;
     }
     public Position cheat() {
-        return getNewPosition(getFixPositions().get(1),startSide,1);
+        return calc.getNewPosition(getFixPositions().get(1),startSide,1);
     }
 
     // ### Methods
@@ -62,7 +61,7 @@ public class Board {
                 if (x==0||x==width-1) {
                     map[y][x] = CellType.WALL;
                 }
-                if (isEven(x) && isEven(y)) {
+                if (calc.isEven(x) && calc.isEven(y)) {
                     map[y][x] = CellType.WALL;
                 }
             }
@@ -80,13 +79,13 @@ public class Board {
     private Position nextStep(Position originalPos) {
         int y = originalPos.getY();
         int x = originalPos.getX();
-        Direction newDirection = possibleWay(originalPos);
+        Direction newDirection = calc.possibleRoute(originalPos, this);
         while (newDirection!= Direction._BACK) {
             if (newDirection!= Direction._BACK) {
                 Position newPos = new Position(y,x);
                 newPos = takeStep(newDirection, originalPos);
                 originalPos = nextStep(newPos);
-                newDirection = possibleWay(originalPos);
+                newDirection = calc.possibleRoute(originalPos, this);
             }
         }
         return originalPos = new Position(y,x);
@@ -95,7 +94,7 @@ public class Board {
     private Position takeStep(Direction direction, Position position) {
         Position newPosition = position.clone();
         for (int i = 0; i < 2; i++){
-            newPosition = getNewPosition(newPosition,direction,1);
+            newPosition = calc.getNewPosition(newPosition,direction,1);
             map[newPosition.getY()][newPosition.getX()]= CellType.ROAD;
         }
         //drawWalls(direction, newPosition);
@@ -116,106 +115,13 @@ public class Board {
         }
     }
 
-    private Direction possibleWay(Position actual) {
-        Direction result;
-        ArrayList<Direction> directions = new ArrayList<Direction>(Arrays.asList(Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST));
-        System.out.println("originDir: " + directions.toString());
-        for (int i = 0; i < 5; i++) {
-            int m = randomRange(0, directions.size()-1);
-            int n = randomRange(0, directions.size()-1);
-            Collections.swap(directions, m, n);
-            System.out.println("dir: " + directions.toString());
-        }
-        do {
-            result = directions.remove(directions.size()-1);
-            if (checkingNextStep(getNewPosition(actual, result, 2))) {
-                return result;
-            } else result = Direction._BACK;
-        } while (directions.size() > 0);
-        return result;
-    }
-
-    private boolean checkingNextStep (Position position) {
-        int y = position.getY();
-        int x = position.getX();
-        if (y > 0 && y < height-1 && x > 0 && x < width-1
-                && map[y][x] != CellType.ROAD && map[y][x] != CellType.WALL
-                && map[y][x] != CellType.EXIT && map[y][x] != CellType.ENTRANCE) {
-            return true;
-        }
-        return false;
-    }
-
-    private Position getNewPosition (Position actual, Direction way, int distance) {
-        int y = actual.getY();
-        int x = actual.getX();
-        if (way == Direction.NORTH) {
-            y -= distance;
-        } else if (way == Direction.SOUTH) {
-            y += distance;
-        } else if (way == Direction.WEST) {
-            x -= distance;
-        } else if (way == Direction.EAST) {
-            x += distance;
-        }
-        return new Position(y, x);
-    }
-
     private Position generateDoors() {
-        startSide = randomDirection();
+        startSide = calc.randomDirection();
         fixPositions = new ArrayList<>();
-        fixPositions.add(randomEdge(startSide));
-        fixPositions.add(randomEdge(startSide.getOpposite()));
+        fixPositions.add(calc.randomDirection(startSide, width, height));
+        fixPositions.add(calc.randomDirection(startSide.getOpposite(), width, height));
         modifyMapCell(fixPositions.get(0), CellType.ENTRANCE);
         modifyMapCell(fixPositions.get(1), CellType.EXIT);
-        return getNewPosition(fixPositions.get(0), startSide.getOpposite(), 1);
-    }
-
-    // ### Randomize methods!
-    // getImg a random position from the edge of the map
-    private Position randomEdge(Direction side) {
-        int x, y;
-        do {
-            x = randomRange(2, width-2);
-            y = randomRange(2, height-2);
-        } while (isEven(x) || isEven(y));
-        switch (side) {
-            case NORTH:
-                return new Position(0, x);
-            case WEST:
-                return new Position(y, 0);
-            case SOUTH:
-                return new Position(height-1, x);
-            case EAST:
-            default:
-                return new Position(y, width-1);
-        }
-    }
-    // getImg a random map-side
-    private Direction randomDirection() {
-        int direction = randomRange(1, 4);
-        if (direction==1) {
-            return Direction.NORTH;
-        } else if (direction==2) {
-            return Direction.WEST;
-        } else if (direction==3) {
-            return Direction.SOUTH;
-        }
-        return Direction.EAST;
-    }
-
-    // get a random int value between @min and @max (both inclusive)
-    private int randomRange (int min, int max) {
-        if (min > max) {
-            int t = min;
-            min = max;
-            max = t;
-        }
-        return new Random().nextInt((max - min) + 1) + min;
-    }
-
-    // TEST a whole number(int) is even(true) or odd(false)
-    private boolean isEven(int n) {
-        return (n % 2 == 0)? true:false;
+        return calc.getNewPosition(fixPositions.get(0), startSide.getOpposite(), 1);
     }
 }

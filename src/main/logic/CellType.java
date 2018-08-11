@@ -6,5 +6,5 @@ public enum CellType {
     ENTRANCE,
     EXIT,
     PLAYER,
-    _NULL;
+    _NULL
 }

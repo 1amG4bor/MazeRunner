@@ -1,4 +1,4 @@
-package main.characters;
+package main.characters.interfaces;
 
 import main.logic.Board;
 

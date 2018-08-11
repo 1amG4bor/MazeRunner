@@ -1,5 +1,7 @@
 package main.characters;
 
+import main.characters.interfaces.AnimalActions;
+import main.characters.interfaces.DefaultActions;
 import main.logic.Board;
 import main.logic.Direction;
 import main.logic.Position;
@@ -11,16 +13,6 @@ public class Animal extends CharacterUnit implements DefaultActions, AnimalActio
 
     @Override
     public void bite() {
-
-    }
-
-    @Override
-    public void walk() {
-
-    }
-
-    @Override
-    public void run() {
 
     }
 

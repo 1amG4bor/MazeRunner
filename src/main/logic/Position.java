@@ -33,7 +33,7 @@ public class Position {
     }
 
     public boolean isEqual (Position p) {
-        return (y==p.getY() && x==p.getX())?true:false;
+        return y == p.getY() && x == p.getX();
     }
 
     //endregion

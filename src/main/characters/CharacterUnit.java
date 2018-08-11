@@ -1,5 +1,6 @@
 package main.characters;
 
+import main.characters.interfaces.Movement;
 import main.logic.Board;
 import main.logic.CellType;
 import main.logic.Direction;

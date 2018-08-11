@@ -10,16 +10,13 @@ public class Main extends JFrame {
     }
 
     private void initUI() {
-        int w, h;
         setTitle("Maze Runner");
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        setUndecorated(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Dimension size = getSize();
-
+        // Start screen
         add(new Level(GameLevels.LEVEL_1));
-        setSize(500,500 );//todo set size
-        //setSize(100,100);
-        setLocation(100,100);
-
     }
 
     public static void main(String[] args) {
