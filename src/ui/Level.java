@@ -1,15 +1,15 @@
 package ui;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 import logic.GameLevels;
 import logic.Textures;
 import logic.model.Position;
 import logic.model.characters.*;
-import logic.factory.KeyBindFactory;
 import presenter.LevelPresenter;
+
+import static java.lang.Thread.sleep;
 
 public class Level extends JLayeredPane implements LevelPresenter.LevelView {
     private LevelPresenter presenter;
@@ -18,15 +18,17 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
     private JLabel hpBar = new JLabel(new ImageIcon("images/panel/hpBar.png"));
     private JLabel powerBar = new JLabel(new ImageIcon("images/panel/powerBar.png"));
     private JLabel xpBar = new JLabel(new ImageIcon("images/panel/xpBar.png"));
-    private JLabel hud = new JLabel(new ImageIcon("images/panel/emptyHud.png"));
+    private JLabel hud = new JLabel(new ImageIcon("images/panel/emptyHud2.png"));
+    private JLabel avatar = new JLabel();
     private JLabel name = new JLabel();
     private JLabel level = new JLabel();
     private JLabel bag = new JLabel(new ImageIcon("images/panel/bag.png"));
     private JLabel wpnIcon = new JLabel(new ImageIcon("images/panel/weaponSmall.png"));
     // board components
     public JPanel board = new JPanel();
-    public JLabel playerIcon = new JLabel();
-    public JLabel infoText = new JLabel();
+    private JLabel playerIcon = new JLabel();
+    private ArrayList<JLabel> enemiesIcons;
+    private JLabel infoText = new JLabel();
     private Position boardTopLeft = new Position(145, 20);
 
     public Level(GameLevels levelType) {
@@ -35,21 +37,14 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         setLayout(null);
         setOpaque(true);
         setBackground(new Color(15, 15, 15));
+        enemiesIcons = new ArrayList<JLabel>();
+        for (int i = 0; i < Enemies.getInstance().sizeOfArmy(); i++) {
+            enemiesIcons.add(new JLabel());
+        }
+        avatar.setIcon(Player.getInstance().getAvatar());
         addElements();
-        setBindings();
-        motionTimer = new Timer(50, e -> {
-            if (Player.getInstance().getDy() != 0 || Player.getInstance().getDx()!= 0) {
-                presenter.playerMove();
-           } else {
-                presenter.playerStop();
-            }
-        });
-        motionTimer.start();
+        handleKeyPress();
         setVisible(true);
-    }
-
-    public LevelPresenter getPresenter() {
-        return presenter;
     }
 
     private void addElements() {
@@ -71,7 +66,7 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         powerBar.setBounds(206, 68, 200, 11);
         xpBar.setBounds(206, 98, 0, 11);
         hud.setBounds(0, 0, 420, 220);
-
+        avatar.setBounds(32,12,120,120);
         name.setBounds(25, 136, 130, 20);
         setLabel(name, Color.white, 14);
         level.setBounds(142, 104, 25, 25);
@@ -81,22 +76,30 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
     private void setBoard() {
         board.setBackground(new Color(0, 200, 0, 30));
         board.setOpaque(false);
-        boardTopLeft = new Position(145,20);
-        board.setBounds(20, 145,
+        boardTopLeft = new Position(160,20);
+        board.setBounds(20, 160,
                 App.getInstance().getAppW() - 40,
                 App.getInstance().getAppH() - 160);
         board.setVisible(true);
     }
 
     private void setCharacters() {
+//        playerIcon.setBorder(BorderFactory.createLineBorder(Color.white, 1));
         playerIcon.setIcon(new ImageIcon(Player.getInstance().getActualImg()));
-        playerIcon.setBorder(BorderFactory.createLineBorder(Color.white, 1));
-        Position drawingCoordinate = Player.getInstance().getCoordinate().shiftPosition(boardTopLeft).shiftPosition(-32, -32);
+        Position playerGfxCoordinate = Player.getInstance().getCoordinate().shiftPosition(boardTopLeft).shiftPosition(-32, -32);
         playerIcon.setBounds(
-                drawingCoordinate.getX(),
-                drawingCoordinate.getY(),
+                playerGfxCoordinate.getX(),
+                playerGfxCoordinate.getY(),
                 64,64);
-        // todo: drawing enemies
+        int limit = Enemies.getInstance().sizeOfArmy();
+        for (int i = 0; i < limit; i++) {
+            enemiesIcons.get(i).setIcon(new ImageIcon(Enemies.getInstance().getUnit(i).getActualImg()));
+            Position enemyGfxCoordinate = Enemies.getInstance().getUnit(i).getCoordinate().shiftPosition(boardTopLeft).shiftPosition(-32, -32);
+            enemiesIcons.get(i).setBounds(
+                    enemyGfxCoordinate.getX(),
+                    enemyGfxCoordinate.getY(),
+                    64,64);
+        }
     }
 
     private void addingElements() {
@@ -104,6 +107,7 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         add(powerBar,   JLayeredPane.PALETTE_LAYER);
         add(xpBar,      JLayeredPane.PALETTE_LAYER);
         add(hud,        JLayeredPane.MODAL_LAYER);
+        add(avatar,     JLayeredPane.PALETTE_LAYER);
         add(level,      JLayeredPane.POPUP_LAYER);
         add(name,       JLayeredPane.POPUP_LAYER);
 
@@ -112,6 +116,13 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         add(wpnIcon,    JLayeredPane.POPUP_LAYER);
         add(infoText,   JLayeredPane.POPUP_LAYER);
         add(playerIcon, JLayeredPane.POPUP_LAYER);
+        addingJLabelList(enemiesIcons, JLayeredPane.POPUP_LAYER);
+    }
+
+    private void addingJLabelList(ArrayList<JLabel> enemiesIcons, Integer popupLayer) {
+        for (JLabel item: enemiesIcons) {
+            add(item, popupLayer);
+        }
     }
 
     private void setLabel(JLabel c, Color color, int fontSize) {
@@ -129,23 +140,29 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         xpBar.setBounds     (206, 98, xpLevel, 11);
         name.setText(player.getName());
         level.setText(String.valueOf(player.getLevel()));
-        infoText.setText("coord: " + Player.getInstance().getCoordinate().toString() +
-                    "; pos: " + Player.getInstance().getPosition().toString());
+//        infoText.setText("player(delta): " + Player.getInstance().getDx() + "," + Player.getInstance().getDy() +
+//                    "; enemy(delta): " + Enemies.getInstance().getUnit(0).getDx() + "," + Enemies.getInstance().getUnit(0).getDy());
+        Player p = Player.getInstance();
+        infoText.setText("coord: " + p.getCoordinate().toString() +
+                        "; pos: " + p.getPosition().toString() +
+                        " > " + p.getDirection().toString());
         repaint();
     }
 
     @Override
-    public void drawMap(Textures[][] textureMap, int w, int h) {
+    public void drawMap(Textures[][] floorMap, Textures[][] wallMap, int w, int h) {
         int size = 64;
         board.setLayout(null);
         for (int y = 0; y < h; y++) {
             for (int x = 0; x < w; x++) {
-                JLabel cell = new JLabel(new ImageIcon(textureMap[y][x].getImg()));
-                cell.setBounds(x*size, y*size, size, size);
-                board.add(cell, y, x);
+                JLabel floor = new JLabel(new ImageIcon(floorMap[y][x].getImg()));
+                JLabel wall = new JLabel(new ImageIcon(wallMap[y][x].getImg()));
+                floor.setBounds(x*size, y*size, size, size);
+                wall.setBounds(x*size, y*size, size, size);
+                board.add(floor, y, x);
+                board.add(wall, y, x);
             }
         }
-        // make it visible
         repaint();
     }
 
@@ -165,26 +182,18 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         return boardTopLeft;
     }
 
-    private void setBindings() {
-        KeyBindFactory factory = new KeyBindFactory(this);
-        // pressed
-        factory.addMoveBinding(KeyEvent.VK_UP,   0, true, -1,true);
-        factory.addMoveBinding(KeyEvent.VK_DOWN, 0, true, 1, true);
-        factory.addMoveBinding(KeyEvent.VK_LEFT, 0, true, -1, false);
-        factory.addMoveBinding(KeyEvent.VK_RIGHT,0, true, 1, false);
-        // released
-        factory.addMoveBinding(KeyEvent.VK_UP,   0, false, 0, true);
-        factory.addMoveBinding(KeyEvent.VK_DOWN, 0, false, 0, true);
-        factory.addMoveBinding(KeyEvent.VK_LEFT, 0, false, 0, false);
-        factory.addMoveBinding(KeyEvent.VK_RIGHT,0, false, 0, false);
-        this.requestFocus();
-
-        // menu
-        int AFC = JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT;
-        this.getInputMap(AFC).put(KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0),"showMenu");
-        this.getActionMap().put("showMenu", new AbstractAction() {
-            @Override public void actionPerformed(ActionEvent e) {presenter.switchScreen(); }
+    public void handleKeyPress() {
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                motionTimer = new Timer(50, e -> {
+                    Player p = Player.getInstance();
+                    if (p.isInGame() && (p.getDy() != 0 || p.getDx()!= 0)) {
+                        if (!p.isWalking) presenter.playerMove();
+                    }
+                });
+                motionTimer.start();
+            }
         });
     }
-
 }

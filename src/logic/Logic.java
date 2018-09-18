@@ -2,7 +2,7 @@ package logic;
 
 import logic.factory.BoardFactory;
 import logic.factory.CharacterFactory;
-import logic.factory.DefaultBoardFactory;
+import logic.factory.MazeBoardFactory;
 import logic.factory.DefaultCharacterFactory;
 
 public class Logic {
@@ -13,11 +13,11 @@ public class Logic {
     private Logic() {
     }
 
-    private BoardFactory boardFactory = new DefaultBoardFactory();
+    private BoardFactory boardFactory = MazeBoardFactory.getInstance();
 
     public BoardFactory getBoardFactory() {return boardFactory;}
 
-    private CharacterFactory characterFactory = new DefaultCharacterFactory();
+    private CharacterFactory characterFactory = DefaultCharacterFactory.getInstance();
 
     public CharacterFactory getCharacterFactory() {return characterFactory;}
 }

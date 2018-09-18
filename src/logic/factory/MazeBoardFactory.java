@@ -10,7 +10,13 @@ import logic.model.Position;
 import java.awt.*;
 import java.util.Arrays;
 
-public class DefaultBoardFactory implements BoardFactory {
+public class MazeBoardFactory implements BoardFactory {
+    private static final MazeBoardFactory instance = new MazeBoardFactory();
+    private MazeBoardFactory() { }
+    public static MazeBoardFactory getInstance() {
+        return instance;
+    }
+
     private Board board;
     private Dimension dimension;
 
@@ -153,9 +159,11 @@ public class DefaultBoardFactory implements BoardFactory {
         board.setStartSide(Randomizer.getInstance().randomDirection());
         // positions=[0]: entrance, [1]: exit
         board.addFixPositions(
-                Randomizer.getInstance().randomPositionInEdge(board.getStartSide(), (int) dimension.getWidth(), (int) dimension.getHeight()));
+                Randomizer.getInstance().randomPositionOnEdge(board.getStartSide(), (int) dimension.getWidth(), (int) dimension.getHeight()));
+        board.addKeyPositions("Entrance", board.getFixPositions().get(0));
         board.addFixPositions(
-                Randomizer.getInstance().randomPositionInEdge(board.getStartSide().getOpposite(), (int) dimension.getWidth(), (int) dimension.getHeight()));
+                Randomizer.getInstance().randomPositionOnEdge(board.getStartSide().getOpposite(), (int) dimension.getWidth(), (int) dimension.getHeight()));
+        board.addKeyPositions("Exit", board.getFixPositions().get(1));
         board.modifyMapCell(board.getFixPositions().get(0), CellType.ENTRANCE);
         board.modifyMapCell(board.getFixPositions().get(1), CellType.EXIT);
         return Calculation.getInstance().getNewPosition(board.getFixPositions().get(0), board.getStartSide().getOpposite(), 1);

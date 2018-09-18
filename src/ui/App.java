@@ -1,46 +1,48 @@
 package ui;
 
+import logic.model.Board;
+import ui.model.GamePanel;
+import ui.model.MenuPanel;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.util.ArrayList;
 
 public final class App extends JFrame {
     private static final App instance = new App();
     private int appW;
     private int appH;
-    private JPanel menuPanel;
-    private JPanel gamePanel;
-
-    private App(){
-        initUI();
-    }
+    private static MenuPanel menuPanel;
+    private static GamePanel gamePanel;
+    public static ArrayList<Board> levelList = new ArrayList<>();
 
     public static App getInstance() {
         return instance;
+    }
+    private App(){
+        initUI();
     }
 
     // region Getters
     public int getAppW() {
         return appW;
     }
-
     public int getAppH() {
         return appH;
     }
-
-    public JPanel getMenuPanel() {
+    public static MenuPanel getMenuPanel() {
         return menuPanel;
     }
-
-    public JPanel getGamePanel() {
+    public static GamePanel getGamePanel() {
         return gamePanel;
     }
     // endregion
-
     // region Setters
     public void setAppW(int appW) {
         this.appW = appW;
     }
-
     public void setAppH(int appH) {
         this.appH = appH;
     }
@@ -49,16 +51,15 @@ public final class App extends JFrame {
     private void initUI() {
         setMainFrame();
         // init screens
-        gamePanel = initPanel();
+        Dimension appDimension = new Dimension(appW, appH);
+        gamePanel = new GamePanel(appDimension);
         add(gamePanel);
-        gamePanel.hide();
 
-        menuPanel = initPanel();
+        menuPanel = new MenuPanel(appDimension);
         menuPanel.add(new Menu());
         add(menuPanel);
         // start game
-        menuPanel.show();
-        // TODO: save gamestate & exit
+        menuPanel.setVisible(true);
     }
 
     private void setMainFrame() {
@@ -83,7 +84,6 @@ public final class App extends JFrame {
     }
 
     public static void main(String[] args) {
-
         EventQueue.invokeLater(() -> {
             instance.pack();
             instance.setVisible(true);
@@ -91,5 +91,19 @@ public final class App extends JFrame {
         });
     }
 
-}
+    // region Methods
+    public static Board getCurrentLevel() {
+        return levelList.get(levelList.size() - 1);
+    }
+    public static void addLevel(Board board) {
+        levelList.add(board);
+    }
+    public static void switchScreen(JPanel hide, JPanel show) {
+        show.requestFocusInWindow();
+        show.setVisible(true);
+        hide.setVisible(false);
+    }
 
+    // endregion
+
+}

@@ -5,6 +5,5 @@ public enum CellType {
     ROAD,
     ENTRANCE,
     EXIT,
-    PLAYER,
     _NULL // need to backlog in recursive map-generate
 }

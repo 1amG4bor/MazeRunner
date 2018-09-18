@@ -1,20 +1,35 @@
 package logic.factory;
 
+import logic.model.Board;
 import logic.model.characters.CharacterUnit;
-import logic.model.characters.animation.Sprite;
-import logic.model.characters.animation.SpriteSource;
+import logic.model.characters.UnitType;
 import logic.model.Direction;
 import logic.model.Position;
+import logic.model.characters.unitTypes.TestEnemy;
 
 public class DefaultCharacterFactory implements CharacterFactory {
+    private static final DefaultCharacterFactory instance = new DefaultCharacterFactory();
+    private DefaultCharacterFactory() { }
+    public static DefaultCharacterFactory getInstance() {
+        return instance;
+    }
+
     @Override
     public CharacterUnit createPlayer() {
         return null;
     }
 
     @Override
-    public CharacterUnit createEnemy(CharacterUnit unitType, Position position, Direction direction, int health, int speed, int viewDistance, boolean isRun) {
-        Sprite unitSprite = new Sprite(SpriteSource.valueOf(unitType.toString()).getFile());
-        return new CharacterUnit(position, direction, health, speed, 10, false, unitSprite);
+    public CharacterUnit createEnemy(UnitType unitType, Board onBoard) {
+        switch (unitType) {
+            case TESTENEMY:
+                return new TestEnemy(new Position(0,0), onBoard, Direction.WEST, 100, 10, unitType.getSprite());
+            case ORC:
+            case SKELETON:
+            default:
+                return null;
+        }
     }
+
+
 }

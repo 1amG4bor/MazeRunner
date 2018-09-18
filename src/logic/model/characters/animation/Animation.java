@@ -97,7 +97,7 @@ public class Animation {
                 frameCount = 0;
                 currentFrame += animationDirection;
 
-                if (currentFrame > totalFrames - 1) {
+                if (currentFrame > totalFrames) {
                     currentFrame = 0;
                 }
                 else if (currentFrame < 0) {
@@ -108,6 +108,6 @@ public class Animation {
     }
 
     public boolean isLastFrame() {
-        return currentFrame==totalFrames;
+        return currentFrame==totalFrames-1;
     }
 }

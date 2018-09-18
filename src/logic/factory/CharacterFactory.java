@@ -1,17 +1,10 @@
 package logic.factory;
 
+import logic.model.Board;
 import logic.model.characters.CharacterUnit;
-import logic.model.Direction;
-import logic.model.Position;
+import logic.model.characters.UnitType;
 
 public interface CharacterFactory {
     CharacterUnit createPlayer();
-    CharacterUnit createEnemy(
-            CharacterUnit unitType,
-            Position position,
-            Direction direction,
-            int health,
-            int speed,
-            int viewDistance,
-            boolean isRun);
+    CharacterUnit createEnemy(UnitType type, Board onBoard);
 }

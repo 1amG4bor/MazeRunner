@@ -54,5 +54,9 @@ public class Position {
         return "(" + x + ", " + y + ")";
     }
 
+    public Position setNull() {
+        return new Position(0,0);
+    }
+
     //endregion
 }

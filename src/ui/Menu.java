@@ -1,6 +1,7 @@
 package ui;
 
 import presenter.MenuPresenter;
+import ui.model.MenuPanel;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -36,24 +37,35 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
         buttons.add(new JButton("Save Game"));
         buttons.add(new JButton("Practice"));
         buttons.add(new JButton("Exit!"));
+        App.getMenuPanel().setMenuID(0);
+        App.getMenuPanel().setLastID(4);
         addElements();
         setActions();
-        setBindings();
         setVisible(true);
     }
 
     // region Getters
-    @Override
-    public JButton getPrevBtn() {
-        int i = highlighted ==0 ? 4 : highlighted-1;
-        return buttons.get(i);
+    public JButton getBtnByIndex(int index) {
+        return buttons.get(index);
     }
 
     @Override
-    public JButton getNextBtn() {
-        int i = highlighted ==4 ? 0 : highlighted+1;
-        return buttons.get(i);
+    public void lightItUp(JButton btnLight) {
+        buttons.get(highlighted).setIcon(new ImageIcon(btn));
+        btnLight.setIcon(new ImageIcon(btnActive));
+        highlighted = getBtnIndex(btnLight);
     }
+
+    @Override
+    public int getSelected() {
+        return highlighted;
+    }
+
+    @Override
+    public void reDraw() {
+        repaint();
+    }
+    // endregion
 
     private int getBtnIndex(JButton btn) {
         switch (btn.getText()) {
@@ -69,47 +81,6 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
                 return  4;
             default: return 0;
         }
-    }
-    // endregion
-
-    @Override
-    public void reDraw() {
-        repaint();
-    }
-
-    @Override
-    public void lightItUp(JButton btnLight) {
-        buttons.get(highlighted).setIcon(new ImageIcon(btn));
-        btnLight.setIcon(new ImageIcon(btnActive));
-        highlighted = getBtnIndex(btnLight);
-    }
-
-    private void setBindings() {
-        int AFC = JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT;
-        this.getInputMap().put(KeyStroke.getKeyStroke("UP"),"goUP");
-        this.getActionMap().put("goUP", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                presenter.highlightUp(highlighted);
-            }
-        });
-        this.getInputMap().put(KeyStroke.getKeyStroke("DOWN"),"goDOWN");
-        this.getActionMap().put("goDOWN", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                presenter.highlightDown(highlighted);
-            }
-        });
-        this.getInputMap().put(KeyStroke.getKeyStroke("ENTER"),"doAction");
-        this.getActionMap().put("doAction", new AbstractAction() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("doAction");
-                presenter.selectOption(buttons.get(highlighted));
-            }
-        });
-
-        this.requestFocus();
     }
 
     private void addElements() {
@@ -190,6 +161,7 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
             public void mouseEntered(MouseEvent e) {
                 lightItUp(myBtn);
                 highlighted = getBtnIndex(myBtn);
+                App.getMenuPanel().setMenuID(highlighted);
                 presenter.playBip();
             }
         };

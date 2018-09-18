@@ -6,6 +6,7 @@ import logic.Textures;
 import logic.model.Direction;
 import logic.model.Position;
 
+import java.lang.reflect.Field;
 import java.util.Random;
 
 public final class Randomizer {
@@ -20,7 +21,7 @@ public final class Randomizer {
     }
 
     // get a random position JUST from the edge of the map
-    public Position randomPositionInEdge(Direction side, int width, int height) {
+    public Position randomPositionOnEdge(Direction side, int width, int height) {
         int x, y;
         do {
             x = randomIntInRange(2, width - 2);
@@ -39,7 +40,6 @@ public final class Randomizer {
         }
     }
 
-    // get a random map-side
     public Direction randomDirection() {
         int direction = randomIntInRange(1, 4);
         if (direction == 1) {
@@ -76,29 +76,7 @@ public final class Randomizer {
         return result;
     }
 
-    public Textures getRandomFloor() {
-        int i;
-        //Textures[] imgList = new Textures[2];
-        i = randomIntInRange(1, 6);
-        switch (i) {
-            case 1:
-                return Textures.FLOOR1;
-            case 2:
-                return Textures.FLOOR2;
-            case 3:
-                return Textures.FLOOR3;
-            case 4:
-                return Textures.FLOOR4;
-            case 5:
-                return Textures.FLOOR5;
-            case 6:
-            default:
-                return Textures.FLOOR6;
-        }
-    }
-
     public boolean isEven(int n) {
         return n % 2 == 0;
     }
-
 }

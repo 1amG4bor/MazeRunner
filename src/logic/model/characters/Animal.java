@@ -27,4 +27,14 @@ public class Animal extends CharacterUnit implements DefaultActions, AnimalActio
     public void turnRight() {
 
     }
+
+    @Override
+    public void start() {
+
+    }
+
+    @Override
+    public void stop() {
+
+    }
 }

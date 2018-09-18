@@ -1,9 +1,13 @@
 package logic.model;
 
 import logic.GameLevels;
+import logic.model.characters.Player;
 import logic.plugin.Calculation;
 
+import javax.swing.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Board {
     private int width;
@@ -12,6 +16,7 @@ public class Board {
     private CellType[][] map;
     // 'fix positions' on the map => [0]: entrance, [1]: exit, [2]: playerStartPosition
     private ArrayList<Position> fixPositions;
+    public Map<String, Position> keyPositions;
     private Direction startSide;
     public boolean levelInGame;
 
@@ -20,6 +25,7 @@ public class Board {
         height = fieldHeight * 2 + 1;
         map = new CellType[height][width];
         fixPositions = new ArrayList<>();
+        keyPositions = new HashMap<>();
         startSide = null;
         levelInGame = false;
     }
@@ -50,6 +56,10 @@ public class Board {
         return fixPositions;
     }
 
+    public Position getKeyPositions(String key) {
+        return keyPositions.get(key);
+    }
+
     public Direction getStartSide() {
         return startSide;
     }
@@ -75,6 +85,10 @@ public class Board {
 
     public void addFixPositions(Position position) {
         fixPositions.add(position);
+    }
+
+    public void addKeyPositions(String key, Position value) {
+        keyPositions.put(key, value);
     }
 
     // endregion

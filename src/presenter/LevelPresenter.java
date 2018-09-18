@@ -4,24 +4,21 @@ import logic.GameLevels;
 import logic.Logic;
 import logic.Textures;
 import logic.model.Board;
-import logic.model.Direction;
 import logic.model.Position;
 import logic.model.characters.CharacterUnit;
 import logic.model.characters.Enemies;
 import logic.model.characters.Player;
+import logic.model.characters.UnitType;
 import logic.plugin.Calculation;
-import logic.plugin.NameGenerator;
 import logic.plugin.Randomizer;
 import ui.App;
-
+import ui.Level;
 import javax.swing.*;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 
 public class LevelPresenter {
     public interface LevelView {
         void drawPanel(String levelNum, Player player);
-        void drawMap(Textures[][] textureMap, int w, int h);
+        void drawMap(Textures[][] floorMap, Textures[][] wallMap, int w, int h);
         void drawCharacters(CharacterUnit player, Enemies enemies);
         JComponent getBoard();
         Position getBoardPosition();
@@ -32,12 +29,11 @@ public class LevelPresenter {
     // map properties
     private int mapWidth;
     private int mapHeight;
-    private Textures[][] map;
-    private ArrayList<Board> levelList = new ArrayList<>();
+    private Textures[][] floorMap;
+    private Textures[][] wallMap;
     // Singletons
     private Player player = Player.getInstance();
     private Enemies enemies = Enemies.getInstance();
-    private Rendering draw = Rendering.getInstance();
     // animation properties
     private int dx = 0;
     private int dy = 0;
@@ -49,70 +45,87 @@ public class LevelPresenter {
 
     public void initMe(GameLevels levelType) {
         createNewMap(levelType);
-        player.setPosition(getCurrentLevel().getFixPositions().get(2));
-        if (map == null) {
-            map = new Textures[mapHeight][mapWidth];
-            map = Calculation.getInstance().createTextureMap(getCurrentLevel());
-        }
+        floorMap = new Textures[mapHeight][mapWidth];
+        floorMap = Calculation.getInstance().createFloorMap(App.getCurrentLevel());
+        wallMap = new Textures[mapHeight][mapWidth];
+        wallMap = Calculation.getInstance().createWallMap(App.getCurrentLevel());
         setCharacters();
-        view.drawMap(map, mapWidth, mapHeight);
+        view.drawMap(floorMap, wallMap, mapWidth, mapHeight);
+
         timerDraw = new Timer(40, e -> { redrawScreen(); });
         timerDraw.start();
     }
 
     public void switchScreen() {
-        App.getInstance().getMenuPanel().show();
-        App.getInstance().getGamePanel().hide();
+        App.switchScreen(App.getGamePanel(), App.getMenuPanel());
     }
 
     public void playerMove() {
-        player.move(getCurrentLevel());
+        if (!player.move(App.getCurrentLevel(), Player.getInstance())) {
+            // new map
+            startCountBack();
+        };
     }
 
     public void playerStop() {
-        player.stop();
+        player.stop(Player.getInstance());
     }
 
+    public void levelFinished() {
+        timerDraw.stop();
+        App.getGamePanel().removeAll();
+        App.getGamePanel().add(new Level(App.getCurrentLevel().getLevelType().getNext()));
+    }
 
     // region Initiate the map
     private void createNewMap(GameLevels levelType) {
         Board thisLevel = Logic.getInstance().getBoardFactory().createBoard(levelType.getWidth(), levelType.getHeigth());
         thisLevel.setLevelType(levelType);
-        levelList.add(thisLevel);
-        mapWidth = getCurrentLevel().getWidth();
-        mapHeight = getCurrentLevel().getHeight();
-        draw.setMap(null);
+        App.addLevel(thisLevel);
+        mapWidth = App.getCurrentLevel().getWidth();
+        mapHeight = App.getCurrentLevel().getHeight();
+        floorMap = null;
+        wallMap = null;
     }
 
     private void setCharacters() {
-        player.resetPlayerPosition(getCurrentLevel().getFixPositions().get(2), getCurrentLevel().getStartSide().getOpposite());
+        player.resetPosition(App.getCurrentLevel().getFixPositions().get(2), App.getCurrentLevel().getStartSide().getOpposite());
+        player.setInGame(true);
         enemies.killEmAll();
-        addEnemies();
+        addEnemies(App.getCurrentLevel().getLevelType().getEnemyArmySize());
     }
 
-    private void addEnemies() {
-        Position initPosition = new Position(
-                Randomizer.getInstance().randomSpecIntInRange(3, mapHeight - 3, false),
-                Randomizer.getInstance().randomSpecIntInRange(3, mapWidth - 3, false));
-        // enemies.addUnit(Logic.getInstance().getCharacterFactory().createEnemy(TestEnemy)); // todo: create cast-enum
+    private void addEnemies(int count) {
+        for (int i = 0; i < count; i++) {
+            Position initPosition = new Position(
+                    Randomizer.getInstance().randomSpecIntInRange(3, mapHeight - 3, false),
+                    Randomizer.getInstance().randomSpecIntInRange(3, mapWidth - 3, false));
+            enemies.addUnit(Logic.getInstance().getCharacterFactory().createEnemy(UnitType.TESTENEMY, App.getCurrentLevel()));
+            enemies.getUnit(i).resetPosition(initPosition, Randomizer.getInstance().randomDirection());
+        }
     }
-// endregion
+    // endregion
 
     // region Methods
-    private Board getCurrentLevel() {
-        return levelList.get(levelList.size() - 1);
-    }
 
-    // refresh the viewscreen (bind to timer)
-    private void redrawScreen() {
-           // region testing UI changes based on data-modification (will be delete)
-//            player.setHealth(player.getHealth() - 1);
-//            player.setPower(player.getPower() - 3);
-            // endregion
-        view.drawPanel(getCurrentLevel().getLevelType().getName(), player);
+    private void redrawScreen() { // refresh the viewscreen (bind to timer)
+        view.drawPanel(App.getCurrentLevel().getLevelType().getName(), player);
         view.drawCharacters(player, enemies);
     }
 
-
+    public void startCountBack() {
+        Player.getInstance().setInGame(false);
+        var ref = new Object() {
+            int counter = 10;
+        };
+        Timer timer = new Timer(100, e -> {
+            ref.counter--;
+            if (ref.counter ==0) {
+                // todo: maskLayer with darkering effect
+                levelFinished();
+            }
+        });
+        timer.start();
+    }
     // endregion
 }

@@ -10,9 +10,7 @@ import logic.model.Direction;
 import logic.model.Position;
 import logic.model.Board;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 public final class Calculation {
     private static final Calculation instance = new Calculation();
@@ -25,14 +23,15 @@ public final class Calculation {
     public static Calculation getInstance() {
         return instance;
     }
-    
+
     // region 'cell-analyze' methods
     public Direction possibleWay(Position actual, Board board, Direction unitDirection) {
         Direction result;
         ArrayList<Direction> directions = getRandomizedDirectionList(unitDirection);
         do {
             result = directions.remove(directions.size() - 1);
-            if (isNextCellRoad(getNewPosition(actual, result, 1), board)) {
+            Position cellToCheck = getNewPosition(actual, result, 1);
+            if (isNextCellRoad(cellToCheck, board) && !isThereAnyUnit(cellToCheck)) {
                 return result;
             } else result = Direction._BACK;
         } while (directions.size() > 0);
@@ -125,10 +124,13 @@ public final class Calculation {
         return unit.getPosition().isEqual(position);
     }
 
-    public boolean isThereAnyUnit( Position position) {
-        if (!player.getPosition().isEqual(position)) {
+    // todo: modify the method below (isThereAnyUnit)
+    public boolean isThereAnyUnit(Position nextPosition) {
+        if (Player.getInstance().getPosition().isEqual(nextPosition)) {
+            return true;
+        } else {
             for (int i = 0; i < enemies.sizeOfArmy(); i++) {
-                if (!enemies.getUnit(i).getPosition().isEqual(position)) {
+                if (enemies.getUnit(i).getPosition().isEqual(nextPosition)) {
                     return true;
                 }
             }
@@ -156,7 +158,7 @@ public final class Calculation {
         }
     }
 
-    public Target lookForTarget(Board board, Position actual, Direction way, int distance, CharacterUnit unit) {
+    public Target lookForTarget(Board board, Position actual, Direction way, int distance, CharacterUnit target) {
         Position checkingPos;
         for (int i = 1; i <= distance; i++) {
             checkingPos = getNewPosition(actual, way, i);
@@ -164,60 +166,112 @@ public final class Calculation {
                 return null;
             }
             // wall can block the searching
-            if (thereIsSomeOneThere(checkingPos, unit)) {
-                return new Target(unit, unit.getPosition());
+            if (thereIsSomeOneThere(checkingPos, target)) {
+                return new Target(target, target.getPosition());
             }
         }
         return null;
     }
 
-    public Textures[][] createTextureMap(Board level) {
+    public Textures[][] createFloorMap(Board level) {
         int h = level.getHeight();
         int w = level.getWidth();
         Textures[][] map = new Textures[h][w];
         for (int y = 0; y < h; y++) {
             for (int x = 0; x < w; x++) {
-                if (level.getCellValue(new Position(y, x)).equals(CellType.ROAD)) {
-                    map[y][x] = Randomizer.getInstance().getRandomFloor();
-                } else {
-                    map[y][x] = Textures.WALL;
-                }
-                /*if (!isWall(level, y - 1, x) && isWall(level, y, x + 1) && !isWall(level, y + 1, x) && isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_H;
-                    } else if (isWall(level, y - 1, x) && !isWall(level, y, x + 1) && isWall(level, y + 1, x) && !isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_V;
-                    } else if (isWall(level, y - 1, x) && isWall(level, y, x + 1) && isWall(level, y + 1, x) && isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_X;
-                    } else if (isWall(level, y - 1, x) && isWall(level, y, x + 1) && !isWall(level, y + 1, x) && isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_TtT;
-                    } else if (!isWall(level, y - 1, x) && isWall(level, y, x + 1) && isWall(level, y + 1, x) && isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_TtB;
-                    } else if (isWall(level, y - 1, x) && !isWall(level, y, x + 1) && isWall(level, y + 1, x) && isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_TtL;
-                    } else if (isWall(level, y - 1, x) && isWall(level, y, x + 1) && isWall(level, y + 1, x) && !isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_TtR;
-                    } else if (!isWall(level, y - 1, x) && isWall(level, y, x + 1) && isWall(level, y + 1, x) && !isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_TL;
-                    } else if (!isWall(level, y - 1, x) && !isWall(level, y, x + 1) && isWall(level, y + 1, x) && isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_TR;
-                    } else if (isWall(level, y - 1, x) && isWall(level, y, x + 1) && !isWall(level, y + 1, x) && !isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_BL;
-                    } else if (isWall(level, y - 1, x) && !isWall(level, y, x + 1) && !isWall(level, y + 1, x) && isWall(level, y, x - 1)) {
-                        map[y][x] = Textures.WALL_BR;
-                    } else {
-                        map[y][x] = Textures.WALL_X;
-                    }
-                }*/
+                map[y][x] = getRandomFloor();
             }
         }
         return map;
     }
 
-    private boolean isWall(Board level, int y, int x) {
-        if (y >= 0 && y <= level.getHeight() - 1 && x >= 0 && x <= level.getWidth() - 1) {
-            Position position = new Position(y, x);
-            return level.getCellValue(position).equals(CellType.WALL);
+    public Textures[][] createWallMap(Board level) {
+        int h = level.getHeight();
+        int w = level.getWidth();
+        Textures[][] map = new Textures[h][w];
+        for (int y = 0; y < h; y++) {
+            for (int x = 0; x < w; x++) {
+                map[y][x] = getProperTexture(level, new Position(y, x));
+            }
         }
-        return false;
+        if (!level.getStartSide().isVertical()) {
+            modifyStartEndTextures(level, map);
+        }
+        return map;
+    }
+
+    private Textures getProperTexture(Board level, Position position) {
+        switch (level.getCellValue(position)) {
+            case ROAD:
+                return Textures.EMPTY;
+            case WALL:
+                return getProperWall(level, position);
+            case ENTRANCE:
+                return level.getStartSide().isVertical() ? Textures.DOOR_HORIZONTAL : Textures.DOOR_VERTICAL;
+            case EXIT:
+                if (level.getStartSide().isVertical()) {
+                    return Textures.DOOR_HORIZONTAL_OPEN;
+                } else {
+                    return level.getStartSide().equals(Direction.EAST) ? Textures.DOOR_OPEN_WEST :Textures.DOOR_OPEN_EAST;
+                }
+            default:
+                return Textures.SKULL;
+        }
+    }
+
+    private void modifyStartEndTextures(Board level, Textures[][] map) {
+        Position upToStart = level.keyPositions.get("Entrance").shiftPosition(-1,0);
+        Position upToEnd = level.keyPositions.get("Exit").shiftPosition(-1,0);
+        Boolean startBridgeIsWall, endBridgeIsWall;
+        if (level.getStartSide().equals(Direction.WEST)) {
+            // Bridge position is up + 'left or right' from start/end position (question is that cell is wall or not)
+            startBridgeIsWall = level.getCellValue(upToStart.shiftPosition(0,1)).equals(CellType.WALL) ? true : false;
+            endBridgeIsWall   = level.getCellValue(upToEnd.shiftPosition(0,-1)).equals(CellType.WALL) ? true : false;
+            map[upToStart.getY()][upToStart.getX()] = startBridgeIsWall ? Textures.DOOR_UPRIGHT : Textures.DOOR_UpToVERTICAL;
+            map[upToEnd.getY()][upToEnd.getX()] = endBridgeIsWall ? Textures.WALL_BOTTOM_RIGHT : Textures.WALL_VERTICALwithEND;
+        } else {
+            startBridgeIsWall = level.getCellValue(upToStart.shiftPosition(0,-1)).equals(CellType.WALL) ? true : false;
+            endBridgeIsWall   = level.getCellValue(upToEnd.shiftPosition(0,1)).equals(CellType.WALL) ? true : false;
+            map[upToStart.getY()][upToStart.getX()] = startBridgeIsWall ? Textures.DOOR_UPLEFT : Textures.DOOR_UpToVERTICAL;
+            map[upToEnd.getY()][upToEnd.getX()] = endBridgeIsWall ? Textures.WALL_BOTTOM_LEFT : Textures.WALL_VERTICALwithEND;
+        }
+    }
+
+    private Textures getProperWall(Board level, Position position) {
+        Textures result = getRandomFloor();
+        String wallName = "WALL";
+        Map<String, Integer> walls = whereAreWalls(level, position);
+        for (Map.Entry<String, Integer> entry : walls.entrySet()) {
+            if (entry.getValue()==1) wallName += entry.getKey();
+        }
+        result = Textures.getWallTextures().get(wallName);
+        return result;
+    }
+
+    private Map<String, Integer> whereAreWalls(Board level, Position position) {
+        Map<String, Integer> walls = new LinkedHashMap<>();
+        walls.put("_TOP", isWall(level, position.shiftPosition(-1, 0)));
+        walls.put("_BOTTOM", isWall(level, position.shiftPosition(1, 0)));
+        walls.put("_LEFT", isWall(level, position.shiftPosition(0, -1)));
+        walls.put("_RIGHT", isWall(level, position.shiftPosition(0, 1)));
+        return walls;
+    }
+
+    private int isWall(Board level, Position position) {
+        int y = position.getY();
+        int x = position.getX();
+        if (y >= 0 && y <= level.getHeight() - 1 && x >= 0 && x <= level.getWidth() - 1) {
+            if (level.getCellValue(position).equals(CellType.WALL) ||
+                    level.getCellValue(position).equals(CellType.ENTRANCE) ||
+                    level.getCellValue(position).equals(CellType.EXIT)) {
+                return 1;
+            }
+        }
+        return 0;
+    }
+
+    public Textures getRandomFloor() {
+        String floorName = "FLOOR" + Randomizer.getInstance().randomIntInRange(1, 6);
+        return Textures.getFloorTextures().get(floorName);
     }
 }
