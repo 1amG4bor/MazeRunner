@@ -8,20 +8,27 @@ import logic.model.characters.Player;
 import logic.model.characters.animation.Animation;
 import logic.model.characters.animation.FrameLine;
 import logic.plugin.Calculation;
-import presenter.LevelPresenter;
+
+import java.awt.*;
 
 public abstract class Movement {
     private CharacterUnit unit;
 
+
+
     public boolean move(Board board, CharacterUnit unit) {
         this.unit = unit;
         Position nextstep = unit.getPosition().shiftPosition(unit.getDy(), unit.getDx());
-        if (!unit.isWalking && isValidStep(board, nextstep)) {
+        if (!unit.isItAnimated && isValidStep(board, nextstep)) {
             resetAnim(nextstep);
         } else {
+            unit.setDirection(unit.getNewDirection());
             unit.setCurrentShift(new Position(0, 0));
+            unit.resetAnimation(new Animation(FrameLine.getInstance()
+                    .idle(unit.getSprite(), unit.getDirection()), 1));
         }
         if (Player.getInstance().getPosition().isEqual(board.getFixPositions().get(1))) {
+            Player.getInstance().lastAnim = true;
             return false;
         }
         return true;
@@ -35,21 +42,6 @@ public abstract class Movement {
         unit.setPosition(nextstep);
     }
 
-    public void smoothMove(Board board, CharacterUnit unit) {
-        this.unit = unit;
-        int stepSize = 5;
-        if (isValidMotion(board, new Position(unit.getDy() * stepSize, unit.getDx() * stepSize))) {
-            if (unit.getNewDirection().equals(unit.getDirection())) {
-                if (unit.getAnimation().isStopped()) unit.getAnimation().start();
-            } else {
-                unit.setDirection(unit.getNewDirection());
-                unit.resetAnimation(new Animation(FrameLine.getInstance()
-                        .walk(unit.getSprite(), unit.getDirection()), 1));
-            }
-            takeStep(unit.getDy(), unit.getDx());
-        }
-    }
-
     public void stop(CharacterUnit unit) {
         this.unit = unit;
         unit.getAnimation().stop();
@@ -57,43 +49,18 @@ public abstract class Movement {
         unit.setCoordinate(unit.getPosition().positionToGfxCoordinate());
     }
 
-    private boolean isValidMotion(Board onBoard, Position shift) {
-        Position newCoordinate = unit.getCoordinate().shiftPosition(shift);       // newCoordinate        = coordinate of next movement
-        Position relativeCoordinate = unit.getPosition().positionToGfxCoordinate();  // relativeCoordinate   = coordinate of the actual position
-        if (isOutOfCell(onBoard, newCoordinate, relativeCoordinate)) {
-            Position positionForNewCoordinate = unit.getPosition().shiftPosition(unit.getDy(), unit.getDx());  // positionForNewCoordinate =  table position for the newCoordinate
-            if (!isValidStep(onBoard, positionForNewCoordinate)) {
-                return false;
-            }
-//            return isOutOfCell(onBoard, newCoordinate, relativeCoordinate);
-        }
-        return true;
-    }
-
-    private boolean isOutOfCell(Board onBoard, Position newCoordinate, Position relativeCoordinate) {
-        int yDifference = Math.abs(newCoordinate.getY() - relativeCoordinate.getY());
-        int xDifference = Math.abs(newCoordinate.getX() - relativeCoordinate.getX());
-        if (yDifference > 5 || xDifference > 10) {
-            int yDistanceFromCellCenter = Math.abs(unit.getCoordinate().getY() - relativeCoordinate.getY());
-            int xDistanceFromCellCenter = Math.abs(unit.getCoordinate().getX() - relativeCoordinate.getX());
-            return yDifference >= yDistanceFromCellCenter && xDifference >= xDistanceFromCellCenter;
-        }
-        return false;
-    }
-
     private boolean isValidStep(Board onBoard, Position nextPosition) {
-        if ((CellType.ROAD.equals(onBoard.getCellValue(nextPosition))) || (CellType.EXIT.equals(onBoard.getCellValue(nextPosition)) && unit instanceof Player)) {
+        if (onBoard.isValidCell(nextPosition)  && (onBoard.getCellValue(nextPosition).equals(CellType.ROAD)) || ((onBoard.getCellValue(nextPosition).equals(CellType.EXIT)) && unit instanceof Player)) {
             return !Calculation.getInstance().isThereAnyUnit(nextPosition);
-//            return true;
         }
         return false;
     }
 
-    private void takeStep(int dy, int dx) {
-        Position shift = new Position(dy * 5, dx * 5);
-        unit.setCoordinate(unit.getCoordinate().shiftPosition(shift));
-        unit.setPosition(unit.getCoordinate().gfxCoordinateToPosition());
-//        System.out.println("Position: " + unit.getPosition());
-//        System.out.println("Coordinate: " + unit.getCoordinate());
+    public void turnLeft() {
+        unit.setDirection(unit.getDirection().getPrev());
+    }
+
+    public void turnRight() {
+        unit.setDirection(unit.getDirection().getNext());
     }
 }

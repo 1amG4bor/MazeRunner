@@ -1,7 +1,6 @@
 package ui;
 
 import presenter.MenuPresenter;
-import ui.model.MenuPanel;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -42,6 +41,7 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
         addElements();
         setActions();
         setVisible(true);
+        lightItUp(buttons.get(0));
     }
 
     // region Getters
@@ -63,6 +63,7 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
 
     @Override
     public void reDraw() {
+
         repaint();
     }
     // endregion

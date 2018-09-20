@@ -23,7 +23,7 @@ public class DefaultCharacterFactory implements CharacterFactory {
     public CharacterUnit createEnemy(UnitType unitType, Board onBoard) {
         switch (unitType) {
             case TESTENEMY:
-                return new TestEnemy(new Position(0,0), onBoard, Direction.WEST, 100, 10, unitType.getSprite());
+                return new TestEnemy(new Position(0,0), onBoard, Direction.WEST, 100, 5, unitType.getSprite());
             case ORC:
             case SKELETON:
             default:

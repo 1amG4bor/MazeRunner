@@ -3,20 +3,20 @@ package logic.model.characters;
 import logic.model.Position;
 
 public class Target {
-    private CharacterUnit target;
+    private CharacterUnit character;
     private Position targetLastCoord;
 
     public Target(CharacterUnit target, Position targetLastCoord) {
-        this.target = target;
+        this.character = target;
         this.targetLastCoord = targetLastCoord;
     }
 
-    public CharacterUnit getTarget() {
-        return target;
+    public CharacterUnit getCharacter() {
+        return character;
     }
 
-    public void setTarget(CharacterUnit target) {
-        this.target = target;
+    public void setCharacter(CharacterUnit character) {
+        this.character = character;
     }
 
     public Position getTargetLastCoord() {
@@ -25,5 +25,9 @@ public class Target {
 
     public void setTargetLastCoord(Position targetLastCoord) {
         this.targetLastCoord = targetLastCoord;
+    }
+
+    public boolean isValidLastCoord() {
+        return character.getPosition().isEqual(targetLastCoord);
     }
 }

@@ -51,6 +51,15 @@ public class Board {
         return map[position.getY()][position.getX()];
     }
 
+    public boolean isValidCell(Position position) {
+        try {
+            getCellValue(position);
+        } catch (ArrayIndexOutOfBoundsException ignored) {
+            return false;
+        }
+        return true;
+    }
+
     // get the fix positions from the map => [0]: entrance, [1]: exit, [2]: playerStartPosition
     public ArrayList<Position> getFixPositions() {
         return fixPositions;

@@ -1,7 +1,7 @@
 package logic.factory;
 
 import ui.App;
-import ui.model.MenuPanel;
+import ui.model.MenuScreen;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -46,7 +46,7 @@ public class MenuKeyBindFactory {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!pressed) {
-                    MenuPanel mp = App.getMenuPanel();
+                    MenuScreen mp = App.getMenuPanel();
                     int id = mp.getMenuID();
                     if (keyCode == KeyEvent.VK_UP) {
                         id = id > 0 ? --id : mp.getLastID();

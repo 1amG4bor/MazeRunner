@@ -29,23 +29,7 @@ public abstract class Human extends CharacterUnit implements DefaultActions, Hum
     }
 
     @Override
-    public void turnLeft() {
-        setDirection(getDirection().getPrev());
-    }
-
-    @Override
-    public void turnRight() {
-        setDirection(getDirection().getNext());
-    }
-
-    @Override
     public void fight(Weapon withWeapon) {
     }
-
-/*
-    public Animation walk(Sprite sprite) {
-        return new Animation(FrameLine.getInstance().idle(sprite, getDirection()), 100);
-    }
-*/
 
 }

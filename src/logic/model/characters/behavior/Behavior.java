@@ -9,7 +9,7 @@ public interface Behavior {
      *  PatrollingBehavior  -   random moving on map
      *  GuardingBehavior    -   hold the position & watch
      *  RushingBehavior     -   attack the target
-     *  SeekingBehavior     -   search for target
+     *  FightingBehavior     -   search for target
      *  WatchingBehavior    -   scan the horizont (look for target)
      */
 

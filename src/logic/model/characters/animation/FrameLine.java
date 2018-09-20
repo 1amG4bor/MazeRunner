@@ -10,20 +10,20 @@ public final class FrameLine {
     public static FrameLine getInstance() {
         return frameLine;
     }
-    /*
+    /**
      y: 0-3   Spellcast
      y: 4-7   USE ('Thrust')
      y: 8-11  WALK
      y: 12-15  SLASH
      y: 16-19  SHOOT
      y: 20-23  DIE
-    */
+    **/
     public BufferedImage[] spellCast(Sprite sprite, Direction direction) {
-        return getFrameLine(sprite, directionInInt(direction));
+        return getFrameLine(sprite, directionInInt(direction), 7);
     }
 
     public BufferedImage[] use(Sprite sprite, Direction direction) {
-        return getFrameLine(sprite, directionInInt(direction));
+        return getFrameLine(sprite, directionInInt(direction), 8);
     }
 
     public BufferedImage[] idle(Sprite sprite, Direction direction) {
@@ -32,21 +32,21 @@ public final class FrameLine {
     }
 
     public BufferedImage[] walk(Sprite sprite, Direction direction) {
-        return getFrameLine(sprite, directionInInt(direction) + 8);
+        return getFrameLine(sprite, directionInInt(direction) + 8, 9);
     }
 
     public BufferedImage[] attack(Sprite sprite, Direction direction, boolean isMelee) {
         return isMelee ?
-                getFrameLine(sprite, directionInInt(direction) + 12) :
-                getFrameLine(sprite, directionInInt(direction) + 16);
+                getFrameLine(sprite, directionInInt(direction) + 12, 6) :
+                getFrameLine(sprite, directionInInt(direction) + 16, 13);
     }
 
     public BufferedImage[] die(Sprite sprite, Direction direction) {
-        return getFrameLine(sprite, directionInInt(direction) + 20);
+        return getFrameLine(sprite, 20, 6);
     }
 
-    private BufferedImage[] getFrameLine (Sprite sprite, int actionLine) {
-        BufferedImage[] result = new BufferedImage[sprite.getFrameCount()];
+    private BufferedImage[] getFrameLine (Sprite sprite, int actionLine, int totalFrame) {
+        BufferedImage[] result = new BufferedImage[totalFrame];
         for (int i = 0; i < result.length; i++) {
             result[i] = sprite.getSprite(i, actionLine);
         }

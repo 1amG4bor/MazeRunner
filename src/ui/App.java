@@ -1,22 +1,22 @@
 package ui;
 
 import logic.model.Board;
-import ui.model.GamePanel;
-import ui.model.MenuPanel;
+import ui.model.GameScreen;
+import ui.model.MenuScreen;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
 import java.util.ArrayList;
 
 public final class App extends JFrame {
     private static final App instance = new App();
     private int appW;
     private int appH;
-    private static MenuPanel menuPanel;
-    private static GamePanel gamePanel;
-    public static ArrayList<Board> levelList = new ArrayList<>();
+    private static MenuScreen menuPanel;
+    private static GameScreen gamePanel;
+    private static ArrayList<Board> levelList = new ArrayList<>();
+    public static Font fontAegean12 = new Font("Aegean", Font.PLAIN, 12);
+    public static Font fontAegean18 = new Font("Aegean", Font.BOLD, 18);
 
     public static App getInstance() {
         return instance;
@@ -32,10 +32,10 @@ public final class App extends JFrame {
     public int getAppH() {
         return appH;
     }
-    public static MenuPanel getMenuPanel() {
+    public static MenuScreen getMenuPanel() {
         return menuPanel;
     }
-    public static GamePanel getGamePanel() {
+    public static GameScreen getGamePanel() {
         return gamePanel;
     }
     // endregion
@@ -52,10 +52,10 @@ public final class App extends JFrame {
         setMainFrame();
         // init screens
         Dimension appDimension = new Dimension(appW, appH);
-        gamePanel = new GamePanel(appDimension);
+        gamePanel = new GameScreen(appDimension);
         add(gamePanel);
 
-        menuPanel = new MenuPanel(appDimension);
+        menuPanel = new MenuScreen(appDimension);
         menuPanel.add(new Menu());
         add(menuPanel);
         // start game

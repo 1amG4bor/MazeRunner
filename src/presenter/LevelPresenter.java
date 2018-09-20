@@ -13,6 +13,7 @@ import logic.plugin.Calculation;
 import logic.plugin.Randomizer;
 import ui.App;
 import ui.Level;
+
 import javax.swing.*;
 
 public class LevelPresenter {
@@ -21,60 +22,21 @@ public class LevelPresenter {
         void drawMap(Textures[][] floorMap, Textures[][] wallMap, int w, int h);
         void drawCharacters(CharacterUnit player, Enemies enemies);
         JComponent getBoard();
-        Position getBoardPosition();
+        void resetEnemiesIcons();
     }
 
-    // graphical output
     private LevelView view;
+    private Player player = Player.getInstance();
+    private Enemies enemies = Enemies.getInstance();
+    private Timer timerDraw;
     // map properties
     private int mapWidth;
     private int mapHeight;
     private Textures[][] floorMap;
     private Textures[][] wallMap;
-    // Singletons
-    private Player player = Player.getInstance();
-    private Enemies enemies = Enemies.getInstance();
-    // animation properties
-    private int dx = 0;
-    private int dy = 0;
-    private Timer timerDraw;
 
     public LevelPresenter(LevelView view) {
         this.view = view;
-    }
-
-    public void initMe(GameLevels levelType) {
-        createNewMap(levelType);
-        floorMap = new Textures[mapHeight][mapWidth];
-        floorMap = Calculation.getInstance().createFloorMap(App.getCurrentLevel());
-        wallMap = new Textures[mapHeight][mapWidth];
-        wallMap = Calculation.getInstance().createWallMap(App.getCurrentLevel());
-        setCharacters();
-        view.drawMap(floorMap, wallMap, mapWidth, mapHeight);
-
-        timerDraw = new Timer(40, e -> { redrawScreen(); });
-        timerDraw.start();
-    }
-
-    public void switchScreen() {
-        App.switchScreen(App.getGamePanel(), App.getMenuPanel());
-    }
-
-    public void playerMove() {
-        if (!player.move(App.getCurrentLevel(), Player.getInstance())) {
-            // new map
-            startCountBack();
-        };
-    }
-
-    public void playerStop() {
-        player.stop(Player.getInstance());
-    }
-
-    public void levelFinished() {
-        timerDraw.stop();
-        App.getGamePanel().removeAll();
-        App.getGamePanel().add(new Level(App.getCurrentLevel().getLevelType().getNext()));
     }
 
     // region Initiate the map
@@ -89,43 +51,115 @@ public class LevelPresenter {
     }
 
     private void setCharacters() {
-        player.resetPosition(App.getCurrentLevel().getFixPositions().get(2), App.getCurrentLevel().getStartSide().getOpposite());
+        player.resetState(App.getCurrentLevel().getFixPositions().get(2), App.getCurrentLevel().getStartSide().getOpposite());
+        player.setHealth(player.getMaxHealth());
         player.setInGame(true);
         enemies.killEmAll();
         addEnemies(App.getCurrentLevel().getLevelType().getEnemyArmySize());
     }
 
     private void addEnemies(int count) {
+        Randomizer r = Randomizer.getInstance();
         for (int i = 0; i < count; i++) {
             Position initPosition = new Position(
-                    Randomizer.getInstance().randomSpecIntInRange(3, mapHeight - 3, false),
-                    Randomizer.getInstance().randomSpecIntInRange(3, mapWidth - 3, false));
+                    r.randomSpecIntInRange(3, mapHeight - 3, false),
+                    r.randomSpecIntInRange(3, mapWidth - 3, false));
             enemies.addUnit(Logic.getInstance().getCharacterFactory().createEnemy(UnitType.TESTENEMY, App.getCurrentLevel()));
-            enemies.getUnit(i).resetPosition(initPosition, Randomizer.getInstance().randomDirection());
+            enemies.getUnit(i).resetState(initPosition, r.randomDirection());
         }
     }
     // endregion
 
-    // region Methods
+    // region Methods for the 'view'
+    public void initMe(GameLevels levelType, boolean newMap) {
+        if (newMap) {
+            createNewMap(levelType);
+            floorMap = new Textures[mapHeight][mapWidth];
+            floorMap = Calculation.getInstance().createFloorMap(App.getCurrentLevel());
+            wallMap = new Textures[mapHeight][mapWidth];
+            wallMap = Calculation.getInstance().createWallMap(App.getCurrentLevel());
+            timerDraw = new Timer(40, e -> { redrawScreen(); });
+        }
+        setCharacters();
+        view.drawMap(floorMap, wallMap, mapWidth, mapHeight);
+        timerDraw.start();
+    }
 
+    public void playerMove() {
+        if (!player.move(App.getCurrentLevel(), Player.getInstance())) {
+            player.setDx(0);
+            player.setDy(0);
+            startCountBack(2, false);   // new map
+        };
+    }
+
+    public void playerStop() {
+        player.stop(Player.getInstance());
+    }
+
+    public void backToMainMenu() {
+        var ref = new Object() { int counter = 20; };
+        Timer timer = new Timer(100, e -> {
+            ref.counter--;
+            if (ref.counter ==0) {
+                switchScreen();
+                ((Timer) e.getSource()).stop();
+            }
+        });
+        timer.start();
+    }
+
+    public void switchScreen() {
+        App.switchScreen(App.getGamePanel(), App.getMenuPanel());
+    }
+    // endregion
+
+    // region private internal Methods
     private void redrawScreen() { // refresh the viewscreen (bind to timer)
         view.drawPanel(App.getCurrentLevel().getLevelType().getName(), player);
         view.drawCharacters(player, enemies);
     }
 
-    public void startCountBack() {
-        Player.getInstance().setInGame(false);
+    private void startCountBack(int sec, boolean isFailed) {
         var ref = new Object() {
-            int counter = 10;
+            int counter = sec * 10;
         };
+
         Timer timer = new Timer(100, e -> {
             ref.counter--;
+            // todo: maskLayer with darkering effect
             if (ref.counter ==0) {
-                // todo: maskLayer with darkering effect
-                levelFinished();
+                if (isFailed) {
+                    restartLevel();
+                } else {
+                    nextLevel();
+                }
+                ((Timer) e.getSource()).stop();
             }
         });
         timer.start();
     }
+
+    private void nextLevel() {
+        Player.getInstance().addXp(
+                App.getCurrentLevel().getLevelType().getIndex()*100);
+        Player.getInstance().setInGame(false);
+        levelFinished();
+    }
+
+    private void restartLevel() {
+        timerDraw.stop();
+        enemies.killEmAll();
+        App.getGamePanel().removeAll();
+        App.getGamePanel().add(new Level(App.getCurrentLevel().getLevelType()));
+    }
+
+    private void levelFinished() {
+        timerDraw.stop();
+        enemies.killEmAll();
+        App.getGamePanel().removeAll();
+        App.getGamePanel().add(new Level(App.getCurrentLevel().getLevelType().getNext()));
+    }
     // endregion
+
 }

@@ -39,8 +39,13 @@ public enum Textures {
     AVATAR_1                 (Group.Avatar, new ImageIcon("images/panel/avatar/avatar1.png")),
     AVATAR_2                 (Group.Avatar, new ImageIcon("images/panel/avatar/avatar2.png")),
     AVATAR_3                 (Group.Avatar, new ImageIcon("images/panel/avatar/avatar3.png")),
+    // Bars
+    HPBAR           (Group.Bar, new ImageIcon("images/panel/hpBar.png")),
+    POWERBAR        (Group.Bar, new ImageIcon("images/panel/powerBar.png")),
+    XPBAR           (Group.Bar, new ImageIcon("images/panel/xpBar.png")),
 
 //    _MAP    (Group.Element, new ImageIcon("images/mapbg.png"))
+    DAGGER   (Group.Element, new ImageIcon("images/items/dagger.png")),
     SKULL   (Group.Element, new ImageIcon("images/sprites/skull.png"));
 
     private Group group;
@@ -59,7 +64,8 @@ public enum Textures {
         Floor,
         Wall,
         Door,
-        Avatar
+        Avatar,
+        Bar
     }
 
     public static Map<String, Textures> getFloorTextures() {

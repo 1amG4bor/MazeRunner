@@ -124,7 +124,6 @@ public final class Calculation {
         return unit.getPosition().isEqual(position);
     }
 
-    // todo: modify the method below (isThereAnyUnit)
     public boolean isThereAnyUnit(Position nextPosition) {
         if (Player.getInstance().getPosition().isEqual(nextPosition)) {
             return true;

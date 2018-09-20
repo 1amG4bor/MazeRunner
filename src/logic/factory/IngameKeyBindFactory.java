@@ -3,7 +3,6 @@ package logic.factory;
 import logic.model.Direction;
 import logic.model.characters.Player;
 import ui.App;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.InputEvent;
@@ -31,11 +30,9 @@ public class IngameKeyBindFactory {
         } else {
             action = onRelease ? StopWalking(keyCode, isVertical, delta) : StartWalking(keyCode, isVertical, delta);
         }
-
         component.getInputMap().put(pressedKey, actionMapKey);
         component.getActionMap().put(actionMapKey, action);
     }
-
     public void addKeyPressBinding(int keyCode, int modifier, boolean onRelease) {
         int AFC = JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT;
         KeyStroke pressedKey = KeyStroke.getKeyStroke(keyCode, modifier, onRelease);
@@ -46,19 +43,17 @@ public class IngameKeyBindFactory {
         } else if (KeyEvent.VK_SPACE == keyCode) {
             action = spacePressed();
         }
-
         component.getInputMap().put(pressedKey, actionMapKey);
         component.getActionMap().put(actionMapKey, action);
 
     }
     // endregion
 
-    // region set MoveActions
+    // region set Move Actions
     private Action StartWalking(int keyCode, boolean isVertical, int delta) {
         return new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("start walking");
                 clearLastKeyPress(keyCode, isVertical);
                 Player.getInstance().setRun(false);
                 cursorBtnPressed(keyCode, isVertical, delta);
@@ -70,7 +65,6 @@ public class IngameKeyBindFactory {
         return new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("stop walking");
                 cursorBtnReleased(keyCode, isVertical, delta);
             }
         };
@@ -80,7 +74,6 @@ public class IngameKeyBindFactory {
         return new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("start running");
                 clearLastKeyPress(keyCode, isVertical);
                 Player.getInstance().setRun(true);
                 cursorBtnPressed(keyCode, isVertical, delta);
@@ -92,27 +85,25 @@ public class IngameKeyBindFactory {
         return new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("stop running");
                 cursorBtnReleased(keyCode, isVertical, delta);
             }
         };
     }
 
+    //set configure delta value
     private void cursorBtnPressed(int keyCode, boolean isVertical, int delta) {
         if (Player.getInstance().isInGame()) {
             pressedMoveKey = keyCode;
             Player.getInstance().setNewDirection(calcDirection());
             setDelta(isVertical, delta);
-            System.out.println(KeyEvent.getKeyText(keyCode) + " has pressed");
         }
     }
-
     private void cursorBtnReleased(int keyCode, boolean isVertical, int delta) {
         pressedMoveKey = null;
         setDelta(isVertical, delta);
-        System.out.println(KeyEvent.getKeyText(keyCode) + " has released");
     }
 
+    // region internal methods
     private void clearLastKeyPress(int keyCode, boolean isVertical) {
         if (Player.getInstance().isInGame()) {
             if (pressedMoveKey != null && !pressedMoveKey.equals(keyCode)) {
@@ -124,20 +115,17 @@ public class IngameKeyBindFactory {
 
     private Direction calcDirection() {
         switch (pressedMoveKey) {
-            case 37:
-                return Direction.WEST;
-            case 38:
-                return Direction.NORTH;
-            case 39:
-                return Direction.EAST;
-            case 40:
-                return Direction.SOUTH;
-            default:
-                return null;
+            case 37: return Direction.WEST;
+            case 38: return Direction.NORTH;
+            case 39: return Direction.EAST;
+            case 40: return Direction.SOUTH;
+            default: return null;
         }
     }
 
     private void setDelta(boolean isVertical, int delta) {
+        if (Player.getInstance().getPosition().isEqual(
+                App.getCurrentLevel().getFixPositions().get(1))) { return;}
         if (isVertical) {
             Player.getInstance().setDy(delta);
             Player.getInstance().setDx(0);
@@ -147,13 +135,14 @@ public class IngameKeyBindFactory {
         }
     }
     // endregion
+    // endregion
 
-    // region special bindings
+    // region Special Actions
     private Action escPressed() {
         return new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("esc button has pressed");
+                // todo: show ingameMenu not mainMenu
                 App.switchScreen(App.getGamePanel(), App.getMenuPanel());
             }
         };
@@ -163,7 +152,13 @@ public class IngameKeyBindFactory {
         return new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("space button has pressed");
+                Player p = Player.getInstance();
+                if (!p.isItAnimated) {
+                    setDelta(true, 0);
+                    // todo: call presenter
+                    p.reducePower(Math.round(p.getPower()*0.06F));
+                    p.attack();
+                }
             }
         };
     }

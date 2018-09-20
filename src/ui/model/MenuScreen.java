@@ -7,12 +7,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class MenuPanel extends JPanel {
+public class MenuScreen extends JPanel {
     private int menuID;
     private int lastID;
     private boolean pressed = false;
 
-    public MenuPanel(Dimension dimension) {
+    public MenuScreen(Dimension dimension) {
         setOpaque(false);
         setPreferredSize(dimension);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));

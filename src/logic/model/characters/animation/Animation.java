@@ -9,6 +9,11 @@ public class Animation {
     private int frameDelay;                 // frame delay 1-12 (You will have to play around with this)
     private int currentFrame;               // animations current frame
     private int animationDirection;         // animation direction (i.e counting forward or backward)
+
+    public int getTotalFrames() {
+        return totalFrames;
+    }
+
     private int totalFrames;                // total amount of frames for your animation
 
     private boolean stopped;                // has animations stopped
@@ -83,6 +88,10 @@ public class Animation {
 
     public BufferedImage getSprite() {
         return frames.get(currentFrame).getFrame();
+    }
+
+    public BufferedImage getSprite(int frameNum) {
+        return frames.get(frameNum).getFrame();
     }
 
     public boolean isStopped() {

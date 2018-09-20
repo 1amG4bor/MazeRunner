@@ -21,7 +21,6 @@ public class MenuPresenter {
 
     private MenuView view;
     private Timer menuDraw;
-
     public MenuPresenter(MenuView view) {
         this.view = view;
     }
@@ -52,7 +51,8 @@ public class MenuPresenter {
     // Methods
 
     public void newGameClicked() {
-        App.getInstance().getGamePanel().add(new Level(GameLevels.LEVEL_1));
+        App.getGamePanel().removeAll();
+        App.getGamePanel().add(new Level(GameLevels.LEVEL_1));
         App.switchScreen(App.getMenuPanel(), App.getGamePanel());
     }
 

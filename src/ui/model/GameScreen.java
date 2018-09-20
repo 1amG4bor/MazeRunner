@@ -6,8 +6,8 @@ import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
-public class GamePanel extends JPanel {
-    public GamePanel(Dimension dimension) {
+public class GameScreen extends JPanel {
+    public GameScreen(Dimension dimension) {
         setOpaque(false);
         setPreferredSize(dimension);
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));

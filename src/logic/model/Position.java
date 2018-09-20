@@ -49,14 +49,27 @@ public class Position {
         return new Position(y,x);
     }
 
-    @Override
-    public String toString() {
-        return "(" + x + ", " + y + ")";
-    }
+
 
     public Position setNull() {
         return new Position(0,0);
     }
 
     //endregion
+
+    @Override
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
+
+    public boolean isNextToMe(Position targetLastCoord) {
+        int tX = targetLastCoord.getX();
+        int tY = targetLastCoord.getY();
+        if (tX == getX()) {
+            return Math.abs(tY - getY()) == 1;
+        } else if (tY == getY()) {
+            return Math.abs(tX - getX()) == 1;
+        }
+        return false;
+    }
 }

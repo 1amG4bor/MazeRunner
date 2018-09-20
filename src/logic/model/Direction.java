@@ -27,6 +27,7 @@ public enum Direction {
         return null;
     }
 
+
     public Direction getPrev() {
         switch (this) {
             case NORTH: return WEST;

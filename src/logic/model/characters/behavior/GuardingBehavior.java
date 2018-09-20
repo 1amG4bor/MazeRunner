@@ -2,20 +2,21 @@ package logic.model.characters.behavior;
 
 import logic.model.Board;
 import logic.model.characters.CharacterUnit;
+import logic.model.characters.Human;
+import logic.model.characters.unitTypes.TestEnemy;
 import logic.plugin.Randomizer;
 
 public class GuardingBehavior implements Behavior {
-    private CharacterUnit unit;
+    private Behavior watching = new WatchingBehavior();
 
     @Override
     public void doIt(Board board, CharacterUnit unit) {
         if (Randomizer.getInstance().randomIntInRange(1, 2)==1){
-            // todo
-//            turnLeft();
-//            watch(board, unit);
+            unit.turnLeft();
+            unit.setBehavior(watching);
         } else {
-//            turnRight();
-//            watch(board, unit);
+            unit.turnRight();
+            unit.setBehavior(watching);
         }
     }
 }
