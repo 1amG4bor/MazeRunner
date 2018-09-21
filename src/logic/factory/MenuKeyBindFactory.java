@@ -22,7 +22,7 @@ public class MenuKeyBindFactory {
         actionMapKey += isKeyPress ? "pressed" : "released";
         Action action = isKeyPress ? cursorBtnPressed(keyCode) : cursorBtnReleased(keyCode);
 
-        component.getInputMap().put(pressedKey, actionMapKey);
+        component.getInputMap(AFC).put(pressedKey, actionMapKey);
         component.getActionMap().put(actionMapKey, action);
         component.requestFocus();
     }
@@ -35,12 +35,13 @@ public class MenuKeyBindFactory {
         if (KeyEvent.VK_ENTER == keyCode) {
             action = enterPressed();
         }
-        component.getInputMap().put(pressedKey, actionMapKey);
+        component.getInputMap(AFC).put(pressedKey, actionMapKey);
         component.getActionMap().put(actionMapKey, action);
         component.requestFocus();
     }
 
     // endregion
+
     private Action cursorBtnPressed(int keyCode) {
         return new AbstractAction() {
             @Override
@@ -77,5 +78,4 @@ public class MenuKeyBindFactory {
             }
         };
     }
-
 }

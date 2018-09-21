@@ -1,27 +1,19 @@
-package logic.model.characters.interfaces;
+package logic.model.character.actions;
 
-import logic.model.Board;
 import logic.model.Position;
-import logic.model.characters.CharacterUnit;
-import logic.model.characters.Enemies;
-import logic.model.characters.Player;
-import logic.model.characters.Target;
-import logic.model.characters.animation.Animation;
-import logic.model.characters.animation.FrameLine;
+import logic.model.character.CharacterUnit;
+import logic.model.character.Enemies;
+import logic.model.character.unitType.Player;
+import logic.model.character.animation.Animation;
+import logic.model.character.animation.FrameLine;
 import logic.plugin.Calculation;
-import ui.App;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 import static java.lang.Thread.sleep;
 
 public class UnitAction {
 
     public static void attack(CharacterUnit unit) {
-        CharacterUnit target = null;
+        CharacterUnit target;
         CharacterUnit privateEnemy;
         unit.resetAnimation(new Animation(FrameLine.getInstance()
                 .attack(unit.getSprite(), unit.getDirection(), true), 1));
@@ -36,7 +28,7 @@ public class UnitAction {
             privateEnemy = unit.equals(Player.getInstance()) ? Enemies.getInstance().getUnitByPosition(faceTo) : Player.getInstance();
             float multiple = unit.getPower() / 100F;
             final int damage = Math.round(unit.getDamage() * multiple);
-            reduceHP(unit, privateEnemy, damage);
+            if (unit.isInGame()) { reduceHP(unit, privateEnemy, damage); }
         }
     }
 
@@ -45,7 +37,6 @@ public class UnitAction {
             public void run() {
                 try {
                     sleep(300);
-//                    if (!unit.equals(Player.getInstance())) { damage = 5; }
                     privateEnemy.setHealth(privateEnemy.getHealth()-damage);
                     if (unit.equals(Player.getInstance())) {
                         Player.getInstance().addXp(Math.round(damage/2F));
@@ -53,7 +44,6 @@ public class UnitAction {
                 } catch (InterruptedException e1) {
                     e1.printStackTrace();
                 }
-
             }
         };
         thread.start();

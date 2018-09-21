@@ -1,11 +1,11 @@
 package logic.factory;
 
 import logic.model.Board;
-import logic.model.characters.CharacterUnit;
-import logic.model.characters.UnitType;
+import logic.model.character.CharacterUnit;
+import logic.model.character.UnitType;
 import logic.model.Direction;
 import logic.model.Position;
-import logic.model.characters.unitTypes.TestEnemy;
+import logic.model.character.unitType.TestEnemy;
 
 public class DefaultCharacterFactory implements CharacterFactory {
     private static final DefaultCharacterFactory instance = new DefaultCharacterFactory();
@@ -15,17 +15,14 @@ public class DefaultCharacterFactory implements CharacterFactory {
     }
 
     @Override
-    public CharacterUnit createPlayer() {
-        return null;
-    }
-
-    @Override
     public CharacterUnit createEnemy(UnitType unitType, Board onBoard) {
         switch (unitType) {
             case TESTENEMY:
                 return new TestEnemy(new Position(0,0), onBoard, Direction.WEST, 100, 5, unitType.getSprite());
             case ORC:
+                return new TestEnemy(new Position(0,0), onBoard, Direction.WEST, 100, 5, UnitType.ORC.getSprite());
             case SKELETON:
+                return new TestEnemy(new Position(0,0), onBoard, Direction.WEST, 100, 5, UnitType.SKELETON.getSprite());
             default:
                 return null;
         }

@@ -1,10 +1,7 @@
-package logic.model.characters;
+package logic.model.character;
 
-import logic.model.characters.animation.Sprite;
-import logic.model.characters.behavior.Behavior;
-import logic.model.characters.interfaces.AnimalActions;
-import logic.model.characters.interfaces.DefaultActions;
-import logic.model.Board;
+import logic.model.character.animation.Sprite;
+import logic.model.character.behavior.Behavior;
 import logic.model.Direction;
 import logic.model.Position;
 

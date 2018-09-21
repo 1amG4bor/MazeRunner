@@ -1,4 +1,4 @@
-package logic.model.characters.interfaces;
+package logic.model.character.actions;
 
 
 import logic.model.item.weapon.Weapon;

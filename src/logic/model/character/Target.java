@@ -1,4 +1,4 @@
-package logic.model.characters;
+package logic.model.character;
 
 import logic.model.Position;
 

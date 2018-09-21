@@ -1,9 +1,8 @@
-package logic.model.characters.behavior;
+package logic.model.character.behavior;
 
 import logic.model.Board;
 import logic.model.Direction;
-import logic.model.characters.CharacterUnit;
-import logic.model.characters.interfaces.Movement;
+import logic.model.character.CharacterUnit;
 import logic.plugin.Calculation;
 
 public class RushingBehavior implements Behavior {

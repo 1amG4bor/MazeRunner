@@ -1,11 +1,10 @@
-package logic.model.characters.behavior;
+package logic.model.character.behavior;
 
 import logic.model.Board;
 import logic.model.Direction;
 import logic.model.Position;
-import logic.model.characters.CharacterUnit;
-import logic.model.characters.Target;
-import logic.model.characters.unitTypes.TestEnemy;
+import logic.model.character.CharacterUnit;
+import logic.model.character.Target;
 import logic.plugin.Calculation;
 
 public class WatchingBehavior implements Behavior {

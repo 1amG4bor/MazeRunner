@@ -1,15 +1,12 @@
 package presenter;
 
 import logic.GameLevels;
-import logic.model.Board;
 import ui.App;
 import ui.Level;
-
 import javax.sound.sampled.*;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class MenuPresenter {
     public interface MenuView {
@@ -56,46 +53,41 @@ public class MenuPresenter {
         App.switchScreen(App.getMenuPanel(), App.getGamePanel());
     }
 
+    // region todo: in phase-4
     public void loadGameClicked() {
         // todo: loadFromFile
     }
-
     public void saveGameClicked() {
         // todo: saveToFile
     }
-
     public void randomGameClicked() {
         // todo: generateRandomMap
     }
+    //endregion
 
     public void exitClicked() {
         System.exit(0);
     }
 
-
     public void playBip() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                Clip clip = null;
-                try {
-                    AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("sound/btnHover.wav").getAbsoluteFile());
-                    clip = AudioSystem.getClip();
-                    clip.open(audioInputStream);
-                } catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) {
-                    e.printStackTrace();
-                }
-                assert clip != null;
-                clip.start();
-                try {
-                    Thread.sleep(150);
-                } catch (InterruptedException e1) {
-                    e1.printStackTrace();
-                }
-                clip.stop();
-                clip.close();
+        new Thread(() -> {
+            Clip clip = null;
+            try {
+                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("sound/btnHover.wav").getAbsoluteFile());
+                clip = AudioSystem.getClip();
+                clip.open(audioInputStream);
+            } catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+                e.printStackTrace();
             }
+            assert clip != null;
+            clip.start();
+            try {
+                Thread.sleep(150);
+            } catch (InterruptedException e1) {
+                e1.printStackTrace();
+            }
+            clip.stop();
+            clip.close();
         }).start();
     }
-
 }

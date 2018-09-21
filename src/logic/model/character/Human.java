@@ -1,16 +1,13 @@
-package logic.model.characters;
+package logic.model.character;
 
-import logic.model.characters.animation.Sprite;
-import logic.model.characters.behavior.Behavior;
-import logic.model.characters.interfaces.DefaultActions;
-import logic.model.characters.interfaces.HumanActions;
+import logic.model.character.animation.Sprite;
+import logic.model.character.behavior.Behavior;
+import logic.model.character.actions.DefaultActions;
+import logic.model.character.actions.HumanActions;
 
-import logic.model.Board;
 import logic.model.item.weapon.Weapon;
-import logic.plugin.Calculation;
 import logic.model.Direction;
 import logic.model.Position;
-import logic.plugin.Randomizer;
 
 public abstract class Human extends CharacterUnit implements DefaultActions, HumanActions {
     private Behavior behavior;

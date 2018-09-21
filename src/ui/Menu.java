@@ -14,10 +14,6 @@ import java.util.List;
 
 public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
     private MenuPresenter presenter;
-    public boolean isMainMenu;
-    // gfx components
-    private JLabel background;
-    private JLabel header;
     private BufferedImage title = null;
     private BufferedImage bgImage = null;
     private BufferedImage btn = null;
@@ -25,11 +21,20 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
     private int highlighted = 0;
     private List<JButton> buttons;
 
-    public Menu() {
+    Menu() {
         presenter = new MenuPresenter(this);
         presenter.initMe();
         setLayout(null);
         setOpaque(true);
+        createButtons();
+        addElements();
+        setActions();
+        setVisible(true);
+        lightItUp(buttons.get(0));
+    }
+
+    // init Methods
+    private void createButtons() {
         buttons = new ArrayList<>();
         buttons.add(new JButton("New Game"));
         buttons.add(new JButton("Load Game"));
@@ -38,60 +43,17 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
         buttons.add(new JButton("Exit!"));
         App.getMenuPanel().setMenuID(0);
         App.getMenuPanel().setLastID(4);
-        addElements();
-        setActions();
-        setVisible(true);
-        lightItUp(buttons.get(0));
-    }
-
-    // region Getters
-    public JButton getBtnByIndex(int index) {
-        return buttons.get(index);
-    }
-
-    @Override
-    public void lightItUp(JButton btnLight) {
-        buttons.get(highlighted).setIcon(new ImageIcon(btn));
-        btnLight.setIcon(new ImageIcon(btnActive));
-        highlighted = getBtnIndex(btnLight);
-    }
-
-    @Override
-    public int getSelected() {
-        return highlighted;
-    }
-
-    @Override
-    public void reDraw() {
-
-        repaint();
-    }
-    // endregion
-
-    private int getBtnIndex(JButton btn) {
-        switch (btn.getText()) {
-            case "New Game":
-                return  0;
-            case "Load Game":
-                return  1;
-            case "Save Game":
-                return  2;
-            case "Practice":
-                return  3;
-            case "Exit!":
-                return  4;
-            default: return 0;
-        }
     }
 
     private void addElements() {
         // header + background
-        int w = 1600; // App.getInstance().getAppW();
-        int h = 900;  // App.getInstance().getAppH();
+        int w = App.getAppW();
+        int h = App.getAppH();
         loadImages();
-        background = new JLabel(new ImageIcon(bgImage));
+        // gfx components
+        JLabel background = new JLabel(new ImageIcon(bgImage));
         background.setBounds(0,0,w, h);
-        header = new JLabel(new ImageIcon(title));
+        JLabel header = new JLabel(new ImageIcon(title));
         int x = Math.floorDiv(w, 2) - 600;
         header.setBounds(x,50, 1200, 200);
         // menu items
@@ -115,9 +77,9 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
 
     private void loadImages() {
         try {
-            bgImage = ImageIO.read(new File("images/menu/bg.png"));
-            title = ImageIO.read(new File("images/menu/title.png"));
-            btn = ImageIO.read(new File("images/menu/btn.png"));
+            bgImage =   ImageIO.read(new File("images/menu/bg.png"));
+            title =     ImageIO.read(new File("images/menu/title.png"));
+            btn =       ImageIO.read(new File("images/menu/btn.png"));
             btnActive = ImageIO.read(new File("images/menu/btnActive.png"));
         } catch (IOException e) {
             System.out.println("Error");
@@ -141,23 +103,52 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
         button.setFocusable(false);
         button.setFocusPainted(false);
     }
+    //endregion
+
+    // region Getters
+    public JButton getBtnByIndex(int index) {
+        return buttons.get(index);
+    }
+
+    @Override
+    public void lightItUp(JButton btnLight) {
+        buttons.get(highlighted).setIcon(new ImageIcon(btn));
+        btnLight.setIcon(new ImageIcon(btnActive));
+        highlighted = getBtnIndex(btnLight);
+    }
+
+    @Override
+    public int getSelected() {
+        return highlighted;
+    }
+
+    @Override
+    public void reDraw() {
+        repaint();
+    }
+    // endregion
+
+    private int getBtnIndex(JButton btn) {
+        switch (btn.getText()) {
+            case "New Game":    return  0;
+            case "Load Game":   return  1;
+            case "Save Game":   return  2;
+            case "Practice":    return  3;
+            case "Exit!":       return  4;
+            default: return 0;
+        }
+    }
 
     private void setActions() {
-        buttons.get(0).addActionListener(e -> { presenter.newGameClicked(); });
-        buttons.get(1).addActionListener(e -> { presenter.loadGameClicked(); });
-        buttons.get(2).addActionListener(e -> { presenter.saveGameClicked(); });
-        buttons.get(3).addActionListener(e -> { presenter.randomGameClicked(); });
-        buttons.get(4).addActionListener(e -> { presenter.exitClicked(); });
-
+        buttons.get(0).addActionListener(e -> presenter.newGameClicked());
+        buttons.get(1).addActionListener(e -> presenter.loadGameClicked());
+        buttons.get(2).addActionListener(e -> presenter.saveGameClicked());
+        buttons.get(3).addActionListener(e -> presenter.randomGameClicked());
+        buttons.get(4).addActionListener(e -> presenter.exitClicked());
     }
 
     private MouseListener myMouseListener(JButton myBtn) {
-        MouseListener myListener = new MouseListener() {
-            @Override public void mouseClicked(MouseEvent e) { }
-            @Override public void mousePressed(MouseEvent e) { }
-            @Override public void mouseReleased(MouseEvent e) { }
-            @Override public void mouseExited(MouseEvent e) { }
-
+        return new MouseListener() {
             @Override
             public void mouseEntered(MouseEvent e) {
                 lightItUp(myBtn);
@@ -165,7 +156,10 @@ public class Menu extends JLayeredPane implements MenuPresenter.MenuView {
                 App.getMenuPanel().setMenuID(highlighted);
                 presenter.playBip();
             }
+            @Override public void mouseClicked(MouseEvent e) { }
+            @Override public void mousePressed(MouseEvent e) { }
+            @Override public void mouseReleased(MouseEvent e) { }
+            @Override public void mouseExited(MouseEvent e) { }
         };
-        return myListener;
     }
 }

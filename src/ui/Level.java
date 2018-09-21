@@ -7,7 +7,8 @@ import java.util.Map;
 import logic.GameLevels;
 import logic.Textures;
 import logic.model.Position;
-import logic.model.characters.*;
+import logic.model.character.*;
+import logic.model.character.unitType.Player;
 import presenter.LevelPresenter;
 import ui.model.DisplayUnit;
 
@@ -34,10 +35,10 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
     private Map<CharacterUnit, DisplayUnit> enemiesIcons;
     private JLabel infoText = new JLabel();
     private Position boardTopLeft = new Position(145, 20);
-    private JLabel healtbar = new JLabel();
 
     public Level(GameLevels levelType) {
         presenter = new LevelPresenter(this);
+        App.setLevelPresenter(presenter);
         presenter.initMe(levelType, true);
         setLayout(null);
         setOpaque(true);
@@ -82,9 +83,9 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         avatar.setBounds(32, 12, 120, 120);
         weapon.setBounds(0,80,64,64);
         name.setBounds(25, 136, 130, 20);
-        setLabel(name, Color.white, 16);
+        setLabel(name, 16);
         level.setBounds(142, 104, 25, 25);
-        setLabel(level, Color.white, 18);
+        setLabel(level, 18);
     }
 
     private void setBar(JLabel bar, ImageIcon imageIcon, String title) {
@@ -101,8 +102,8 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         board.setOpaque(false);
         boardTopLeft = new Position(160, 20);
         board.setBounds(20, 160,
-                App.getInstance().getAppW() - 40,
-                App.getInstance().getAppH() - 160);
+                App.getAppW() - 40,
+                App.getAppH() - 160);
         board.setVisible(true);
     }
 
@@ -116,15 +117,17 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         int limit = Enemies.getInstance().sizeOfArmy();
         for (int i = 0; i < limit; i++) {
             CharacterUnit unit = Enemies.getInstance().getUnit(i);
-            DisplayUnit unitGfx = enemiesIcons.get(unit);
-            unitGfx.setImage((new ImageIcon(unit.getActualImg())));
-            int health = (unit.getHealth() > 0 && unit.getHealth() < 100) ? unit.getHealth() : 0;
-            unitGfx.setHealthBar(health);
-            Position enemyGfxCoordinate = unit.getCoordinate().shiftPosition(boardTopLeft).shiftPosition(-32, -32);
-            unitGfx.setBounds(
-                    enemyGfxCoordinate.getX(),
-                    enemyGfxCoordinate.getY(),
-                    64, 64);
+            if (unit.isInGame()) {
+                DisplayUnit unitGfx = enemiesIcons.get(unit);
+                unitGfx.setImage((new ImageIcon(unit.getActualImg())));
+                int health = (unit.getHealth() > 0 && unit.getHealth() < 100) ? unit.getHealth() : 0;
+                unitGfx.setHealthBar(health);
+                Position enemyGfxCoordinate = unit.getCoordinate().shiftPosition(boardTopLeft).shiftPosition(-32, -32);
+                unitGfx.setBounds(
+                        enemyGfxCoordinate.getX(),
+                        enemyGfxCoordinate.getY(),
+                        64, 64);
+            }
         }
     }
 
@@ -145,19 +148,19 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
         add(wpnIcon, JLayeredPane.POPUP_LAYER);
         add(infoText, JLayeredPane.POPUP_LAYER);
         add(playerIcon, JLayeredPane.POPUP_LAYER);
-        addEnemies(enemiesIcons, JLayeredPane.POPUP_LAYER);
+        addEnemies(enemiesIcons);
     }
 
-    private void addEnemies(Map<CharacterUnit, DisplayUnit> enemiesIcons, Integer popupLayer) {
+    private void addEnemies(Map<CharacterUnit, DisplayUnit> enemiesIcons) {
         for (DisplayUnit item : enemiesIcons.values()) {
-            add(item, popupLayer);
+            add(item, JLayeredPane.POPUP_LAYER);
         }
     }
 
-    private void setLabel(JLabel c, Color color, int fontSize) {
+    private void setLabel(JLabel c, int fontSize) {
         c.setFont(new Font("Aegean", Font.BOLD, fontSize));
         c.setHorizontalAlignment(JLabel.CENTER);
-        c.setForeground(color);
+        c.setForeground(Color.white);
     }
 
     @Override
@@ -216,28 +219,31 @@ public class Level extends JLayeredPane implements LevelPresenter.LevelView {
     @Override
     public void resetEnemiesIcons() {
         enemiesIcons = new HashMap<>();
-        for (int i = 0; i < Enemies.getInstance().sizeOfArmy(); i++) {
-            enemiesIcons.put(Enemies.getInstance().getUnit(i), new DisplayUnit());
+        Enemies e = Enemies.getInstance();
+        for (int i = 0; i < e.sizeOfArmy(); i++) {
+            CharacterUnit unit = e.getUnit(i);
+            enemiesIcons.put(unit, new DisplayUnit());
+
+            enemiesIcons.get(unit).setImage(new ImageIcon(unit.getActualImg()));
+            int health = (unit.getHealth() > 0 && unit.getHealth() < 100) ? unit.getHealth() : 0;
+            enemiesIcons.get(unit).setHealthBar(health);
         }
     }
 
-    public void handleKeyPress() {
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                motionTimer = new Timer(50, e -> {
-                    Player p = Player.getInstance();
-                    if (p.isInGame() && (p.getDy() != 0 || p.getDx() != 0)) {
-                        if (!p.isItAnimated) presenter.playerMove();
-                    } else {
-                        if (p.getHealth() <= 0) {
-                            presenter.backToMainMenu();
-                            ((Timer)e.getSource()).stop();
-                        }
+    private void handleKeyPress() {
+        EventQueue.invokeLater(() -> {
+            motionTimer = new Timer(50, e -> {
+                Player p = Player.getInstance();
+                if (p.isInGame() && (p.getDy() != 0 || p.getDx() != 0)) {
+                    if (!p.isItAnimated) presenter.playerMove();
+                } else {
+                    if (p.getHealth() <= 0) {
+                        presenter.backToMainMenu(2);
+                        ((Timer)e.getSource()).stop();
                     }
-                });
-                motionTimer.start();
-            }
+                }
+            });
+            motionTimer.start();
         });
     }
 }

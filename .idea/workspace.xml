@@ -5,47 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/logic/model/characters/interfaces/SmoothMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/model/characters/interfaces/UnitAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/model/BlackLayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/model/DisplayBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/model/DisplayUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/logic/model/character/behavior/FightingBehavior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sprites/player/player_dagger.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/sprites/player/player_dagger.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/GameLevels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/GameLevels.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/Textures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/Textures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/factory/CharacterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/factory/CharacterFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/factory/DefaultCharacterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/factory/DefaultCharacterFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/factory/IngameKeyBindFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/factory/IngameKeyBindFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/factory/MazeBoardFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/factory/MazeBoardFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/factory/MenuKeyBindFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/factory/MenuKeyBindFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/CharacterUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/CharacterUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Enemies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/Enemies.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/UnitType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/UnitType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/animation/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/animation/Animation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/animation/FrameLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/animation/FrameLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/Behavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/behavior/Behavior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/GuardingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/behavior/GuardingBehavior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/RushingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/behavior/RushingBehavior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/SeekingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/behavior/FightingBehavior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/WatchingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/behavior/WatchingBehavior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/interfaces/DefaultActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/interfaces/DefaultActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/interfaces/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/interfaces/Movement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/unitTypes/TestEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/characters/unitTypes/TestEnemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/CharacterUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/CharacterUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Enemies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/Enemies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/unitType/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/Target.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/UnitType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/UnitType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/animation/AnimateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/animation/AnimateExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/animation/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/animation/Animation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/animation/AnimationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/animation/AnimationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/animation/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/animation/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/animation/FrameLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/animation/FrameLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/animation/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/animation/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/Behavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/behavior/Behavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/FightingBehavior.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/GuardingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/behavior/GuardingBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/PatrollingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/behavior/PatrollingBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/RushingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/behavior/RushingBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/behavior/WatchingBehavior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/behavior/WatchingBehavior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/interfaces/AnimalActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/actions/AnimalActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/interfaces/DefaultActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/actions/DefaultActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/interfaces/HumanActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/actions/HumanActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/interfaces/Movement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/actions/Movement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/interfaces/SmoothMovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/actions/SmoothMovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/interfaces/UnitAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/actions/UnitAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/model/characters/unitTypes/TestEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/model/character/unitType/TestEnemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/plugin/Calculation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/plugin/Calculation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logic/plugin/Randomizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/plugin/Randomizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presenter/LevelPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/LevelPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/presenter/MenuPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/presenter/MenuPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/model/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/model/GameScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/model/MenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/model/MenuScreen.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -109,35 +110,35 @@
     <session id="-757672679">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="106" />
+          <entry key="project.closed" value="112" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="5" />
-          <entry key="project.open.time.10" value="10" />
-          <entry key="project.open.time.11" value="19" />
+          <entry key="project.open.time.10" value="11" />
+          <entry key="project.open.time.11" value="22" />
           <entry key="project.open.time.12" value="29" />
-          <entry key="project.open.time.13" value="20" />
+          <entry key="project.open.time.13" value="21" />
           <entry key="project.open.time.14" value="3" />
-          <entry key="project.open.time.15" value="5" />
+          <entry key="project.open.time.15" value="6" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="4" />
           <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="108" />
+          <entry key="project.opened" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="4" />
           <entry key="dummy" value="192" />
-          <entry key="java" value="65616" />
+          <entry key="java" value="66680" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="JAVA" value="65616" />
+          <entry key="JAVA" value="66680" />
           <entry key="PLAIN_TEXT" value="192" />
         </counts>
       </usages-collector>
@@ -146,7 +147,7 @@
           <entry key="css" value="2" />
           <entry key="fxml" value="2" />
           <entry key="iml" value="1" />
-          <entry key="java" value="1135" />
+          <entry key="java" value="1195" />
           <entry key="png" value="15" />
         </counts>
       </usages-collector>
@@ -155,7 +156,7 @@
           <entry key="CSS" value="2" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="15" />
-          <entry key="JAVA" value="1135" />
+          <entry key="JAVA" value="1195" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -347,97 +348,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/model/characters/behavior/FightingBehavior.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/model/characters/interfaces/Movement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/presenter/LevelPresenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
-              <folding>
-                <element signature="n#!!doc;n#createNewMap#0;n#LevelPresenter#0" />
-                <element signature="method#initMe#0;class#LevelPresenter#0" />
-                <element signature="method#backToMainMenu#0;class#LevelPresenter#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/Level.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-              <folding>
-                <element signature="method#addElements#0;class#Level#0" />
-                <element signature="method#setHUD#0;class#Level#0" />
-                <element signature="method#setBar#0;class#Level#0" />
-                <element signature="method#setBoard#0;class#Level#0" />
-                <element signature="method#setCharacters#0;class#Level#0" />
-                <element signature="method#addingElements#0;class#Level#0" />
-                <element signature="method#addEnemies#0;class#Level#0" />
-                <element signature="method#setLabel#0;class#Level#0" />
-                <element signature="e#6691#6708#0" />
-                <element signature="method#resetEnemiesIcons#0;class#Level#0" />
-                <element signature="method#handleKeyPress#0;class#Level#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ui/Menu.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-              <folding>
-                <element signature="e#1371#1372#0" expanded="true" />
-                <element signature="e#1412#1413#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/presenter/MenuPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-45">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+            <state relative-caret-position="495">
+              <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
               <folding>
                 <element signature="method#MenuKeyListener#0;class#MenuPresenter#0" />
+                <element signature="n#!!doc;n#loadGameClicked#0;n#MenuPresenter#0" />
+                <element signature="method#loadGameClicked#0;class#MenuPresenter#0" />
+                <element signature="method#saveGameClicked#0;class#MenuPresenter#0" />
+                <element signature="method#randomGameClicked#0;class#MenuPresenter#0" />
                 <element signature="method#playBip#0;class#MenuPresenter#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/logic/model/characters/CharacterUnit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-              <folding>
-                <element signature="e#2249#2265#0" />
-                <element signature="e#3617#3633#0" />
               </folding>
             </state>
           </provider>
@@ -457,8 +379,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>player</find>
-      <find>null</find>
       <find>setGfxCoordinate</find>
       <find>GfxCoordinate</find>
       <find>sort</find>
@@ -487,6 +407,8 @@
       <find>power</find>
       <find>test</find>
       <find>finis</find>
+      <find>healtbar</find>
+      <find>enem</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;, &quot;</replace>
@@ -507,18 +429,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/logic/model/characters/behavior/SeekingBehavior.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/SpriteSource.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/UnitTypes.java" />
-        <option value="$PROJECT_DIR$/src/logic/factory/MyCharacterFactory.java" />
-        <option value="$PROJECT_DIR$/src/logic/factory/CharacterFactory.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/behavior/Behavior.java" />
-        <option value="$PROJECT_DIR$/src/logic/factory/DefaultBoardFactory.java" />
-        <option value="$PROJECT_DIR$/src/logic/factory/MazeBoardFactory.java" />
         <option value="$PROJECT_DIR$/src/logic/Logic.java" />
         <option value="$PROJECT_DIR$/src/logic/factory/KeyBindFactory.java" />
         <option value="$PROJECT_DIR$/src/ui/model/MenuPanel.java" />
-        <option value="$PROJECT_DIR$/src/logic/factory/MenuKeyBindFactory.java" />
         <option value="$PROJECT_DIR$/src/ui/model/GamePanel.java" />
         <option value="$PROJECT_DIR$/src/logic/model/characters/interfaces/DefaultActions.java" />
         <option value="$PROJECT_DIR$/src/logic/model/Direction.java" />
@@ -535,29 +448,38 @@
         <option value="$PROJECT_DIR$/src/logic/model/characters/UnitType.java" />
         <option value="$PROJECT_DIR$/src/ui/model/DisplayUnit.java" />
         <option value="$PROJECT_DIR$/src/logic/model/Board.java" />
-        <option value="$PROJECT_DIR$/src/logic/plugin/Calculation.java" />
         <option value="$PROJECT_DIR$/src/logic/model/characters/interfaces/SmoothMovement.java" />
         <option value="$PROJECT_DIR$/src/logic/model/characters/animation/Animation.java" />
         <option value="$PROJECT_DIR$/src/ui/model/DisplayBar.java" />
-        <option value="$PROJECT_DIR$/src/ui/App.java" />
-        <option value="$PROJECT_DIR$/src/logic/factory/DefaultCharacterFactory.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/animation/FrameLine.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/interfaces/UnitAction.java" />
         <option value="$PROJECT_DIR$/src/logic/model/characters/behavior/WatchingBehavior.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/CharacterUnit.java" />
-        <option value="$PROJECT_DIR$/src/logic/GameLevels.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/Enemies.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/behavior/FightingBehavior.java" />
         <option value="$PROJECT_DIR$/src/logic/model/characters/Target.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/unitTypes/TestEnemy.java" />
-        <option value="$PROJECT_DIR$/src/logic/model/characters/Player.java" />
-        <option value="$PROJECT_DIR$/src/logic/factory/IngameKeyBindFactory.java" />
-        <option value="$PROJECT_DIR$/src/presenter/LevelPresenter.java" />
         <option value="$PROJECT_DIR$/src/logic/model/characters/interfaces/Movement.java" />
         <option value="$PROJECT_DIR$/src/logic/Textures.java" />
-        <option value="$PROJECT_DIR$/src/ui/Level.java" />
+        <option value="$PROJECT_DIR$/src/logic/factory/CharacterFactory.java" />
+        <option value="$PROJECT_DIR$/src/logic/factory/MazeBoardFactory.java" />
+        <option value="$PROJECT_DIR$/src/logic/factory/MenuKeyBindFactory.java" />
         <option value="$PROJECT_DIR$/src/presenter/MenuPresenter.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/Player.java" />
+        <option value="$PROJECT_DIR$/src/logic/plugin/Randomizer.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/unitTypes/TestEnemy.java" />
+        <option value="$PROJECT_DIR$/src/logic/plugin/Calculation.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/interfaces/UnitAction.java" />
         <option value="$PROJECT_DIR$/src/ui/Menu.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/unitTypes/Player.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/Enemies.java" />
+        <option value="$PROJECT_DIR$/src/logic/factory/IngameKeyBindFactory.java" />
+        <option value="$PROJECT_DIR$/src/logic/factory/DefaultCharacterFactory.java" />
+        <option value="$PROJECT_DIR$/src/ui/App.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/CharacterUnit.java" />
+        <option value="$PROJECT_DIR$/src/logic/GameLevels.java" />
+        <option value="$PROJECT_DIR$/src/ui/Level.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/behavior/FightingBehavior.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/animation/FrameLine.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/characters/actions/UnitAction.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/character/actions/UnitAction.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/character/animation/FrameLine.java" />
+        <option value="$PROJECT_DIR$/src/logic/model/character/CharacterUnit.java" />
+        <option value="$PROJECT_DIR$/src/presenter/LevelPresenter.java" />
       </list>
     </option>
   </component>
@@ -569,9 +491,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="205" />
-    <option name="width" value="1600" />
-    <option name="height" value="875" />
+    <option name="x" value="-207" />
+    <option name="y" value="27" />
+    <option name="width" value="1570" />
+    <option name="height" value="654" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -620,6 +543,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -642,90 +566,12 @@
               <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
               <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="factory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="characters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="characters" type="462c0819:PsiDirectoryNode" />
-              <item name="behavior" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="characters" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="characters" type="462c0819:PsiDirectoryNode" />
-              <item name="unitTypes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="weapon" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="logic" type="462c0819:PsiDirectoryNode" />
-              <item name="plugin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="presenter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MazeRunner" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MazeRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -740,9 +586,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/presenter/LevelPresenter.java&#10;test&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/unitTypes/TestEnemy.java&#10;move&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/interfaces/Movement.java&#10;ch&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/CharacterUnit.java&#10;unit&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/model/UnitDisplay.java&#10;app&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/App.java&#10;text&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/Textures.java&#10;char&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/CharacterUnit.java&#10;Pos&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/Position.java&#10;tar&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/Target.java&#10;level&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/Level.java&#10;smo&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/interfaces/SmoothMovement.java&#10;cha&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/CharacterUnit.java&#10;game&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/GameLevels.java&#10;m&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/interfaces/Movement.java&#10;mov&#9;ACTION&#9;Move&#10;frame&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/animation/FrameLine.java&#10;mo&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/interfaces/Movement.java&#10;calc&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/plugin/Calculation.java&#10;LEVEL&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/Level.java&#10;player&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/Player.java&#10;leve&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/Level.java&#10;key&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/factory/KeyBindFactory.java" />
+    <property name="SearchEverywhereHistoryKey" value="App&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/App.java&#10;test&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/unitTypes/TestEnemy.java&#10;move&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/interfaces/Movement.java&#10;ch&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/CharacterUnit.java&#10;unit&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/model/UnitDisplay.java&#10;app&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/App.java&#10;text&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/Textures.java&#10;char&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/CharacterUnit.java&#10;Pos&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/Position.java&#10;tar&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/Target.java&#10;level&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/Level.java&#10;smo&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/interfaces/SmoothMovement.java&#10;cha&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/CharacterUnit.java&#10;game&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/GameLevels.java&#10;m&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/interfaces/Movement.java&#10;mov&#9;ACTION&#9;Move&#10;frame&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/animation/FrameLine.java&#10;mo&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/interfaces/Movement.java&#10;calc&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/plugin/Calculation.java&#10;LEVEL&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/Level.java&#10;player&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/model/characters/Player.java&#10;leve&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/ui/Level.java&#10;key&#9;FILE&#9;file:///home/g4bor/Programming/Java/projects/MazeRunner/src/logic/factory/KeyBindFactory.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537455231724" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537480687444" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="logic.plugin.Randomizer" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -897,10 +743,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="205" width="1600" height="875" extended-state="6" />
+    <frame x="0" y="25" width="1600" height="875" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21428572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.1981982" />
       <window_info id="Structure" order="1" weight="0.24967825" />
       <window_info id="Favorites" order="2" weight="0.23745173" />
       <window_info id="Designer" order="3" />
@@ -909,8 +755,8 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.62684566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.110067114" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5865772" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.09932886" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.48724833" />
@@ -920,8 +766,9 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.40402684" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.31275168" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.2818792" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32885906" />
+      <window_info anchor="bottom" id="Statistic" order="15" weight="0.5543624" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -984,16 +831,11 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/logic/model/characters/behavior/PatrollingBehavior.java</url>
-          <line>36</line>
+          <condition expression="getHealth()&lt;=0" language="JAVA" />
+          <url>file://$PROJECT_DIR$/src/logic/model/character/unitType/TestEnemy.java</url>
+          <line>55</line>
           <properties />
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/logic/model/characters/Player.java</url>
-          <line>80</line>
-          <properties />
-          <option name="timeStamp" value="98" />
+          <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1010,6 +852,21 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>unit.equals(null)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>getHealth()&lt;=0</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>unit.getActualImg().equals(null)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>TestEnemy.class.isInstance(unit) &amp;&amp; isDying==true</expression-string>
         <language-id>JAVA</language-id>
@@ -1039,23 +896,6 @@
       </expression>
       <expression>
         <expression-string>TestEnemy.class.isInstance(unit) &amp;&amp; unit.getAnimation().totalFrames &gt; 5</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>logic.model.characters.unitTypes.TestEnemy</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>TestEnemy.class.isInstance(unit)</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>logic.model.characters.unitTypes.TestEnemy</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>getAnimation().getCurrentFrameNUM() == 8</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>unit.equals(CharacterUnit.class.isInstance(TestEnemy.class))</expression-string>
         <language-id>JAVA</language-id>
         <custom-info>logic.model.characters.unitTypes.TestEnemy</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -1166,109 +1006,46 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/Logic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Java/jdk-10.0.1/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="1498" column="16" selection-start-line="1498" selection-start-column="16" selection-end-line="1498" selection-end-column="16" />
-          <folding>
-            <element signature="e#56943#56944#0" expanded="true" />
-            <element signature="e#56979#56980#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="432" column="21" selection-start-line="432" selection-start-column="21" selection-end-line="432" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/factory/KeyBindFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/logic/factory/MazeBoardFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="36" column="56" selection-start-line="36" selection-start-column="56" selection-end-line="36" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/model/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding>
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/behavior/Behavior.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/behavior/Behavior.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/behavior/GuardingBehavior.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/behavior/GuardingBehavior.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/animation/AnimateExample.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/animation/AnimateExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-811">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/interfaces/DefaultActions.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/actions/DefaultActions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/factory/MenuKeyBindFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="38" column="59" lean-forward="true" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/animation/AnimationType.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/animation/AnimationType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/animation/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#379#380#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,28 +1070,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/plugin/NameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/Animal.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/Animal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/UnitType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -1322,23 +1081,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/interfaces/SmoothMovement.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/actions/SmoothMovement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
           <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1346,91 +1095,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/factory/DefaultCharacterFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/animation/Sprite.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/animation/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/animation/FrameLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#1429#1430#0" expanded="true" />
-            <element signature="e#1479#1480#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/animation/Animation.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/animation/Animation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="93" selection-start-line="93" selection-end-line="93" />
-          <folding>
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#2249#2250#0" expanded="true" />
-            <element signature="e#2307#2308#0" expanded="true" />
-            <element signature="e#2413#2414#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/Human.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/Human.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#924#925#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/plugin/Calculation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="e#625#626#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/behavior/WatchingBehavior.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/behavior/WatchingBehavior.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
           <caret line="26" column="79" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="n#!!doc;n#getAppW#0;n#App#0" />
-            <element signature="e#2660#2661#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1438,28 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
-            <element signature="e#1298#1299#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/model/DisplayUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/GameLevels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1470,90 +1140,192 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/behavior/PatrollingBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/unitTypes/TestEnemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-          <folding>
-            <element signature="n#!!doc;n#goWatch#0;n#TestEnemy#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/Target.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/Target.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
-          <folding>
-            <element signature="e#357#358#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/Enemies.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#1122#1123#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/CharacterUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="e#2249#2265#0" />
-            <element signature="e#3617#3633#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/behavior/FightingBehavior.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/behavior/RushingBehavior.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/behavior/RushingBehavior.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/actions/Movement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/behavior/PatrollingBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+          <folding>
+            <element signature="method#createButtons#0;class#Menu#0" />
+            <element signature="method#loadImages#0;class#Menu#0" />
+            <element signature="method#setButton#0;class#Menu#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/unitType/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="112" column="111" selection-start-line="112" selection-start-column="111" selection-end-line="112" selection-end-column="111" />
           <folding>
             <element signature="method#addXp#0;class#Player#0" />
-            <element signature="method#levelUp#0;class#Player#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/model/DisplayUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/UnitType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/Enemies.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#deleteUnit#0;class#Enemies#0" />
+            <element signature="method#killEmAll#0;class#Enemies#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/GameLevels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="55" column="16" lean-forward="true" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+          <folding>
+            <element signature="e#1393#1394#0" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="method#switchScreen#0;class#App#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/animation/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/behavior/FightingBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/unitType/TestEnemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#goWatch#0;n#TestEnemy#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/animation/FrameLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/CharacterUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="222" column="4" selection-start-line="222" selection-start-column="4" selection-end-line="222" selection-end-column="4" />
+          <folding>
+            <element signature="e#2280#2296#0" />
+            <element signature="e#3648#3664#0" />
+            <element signature="e#5305#5329#0" />
+            <element signature="e#5305#5571#0" />
+            <element signature="e#5577#6122#0" />
+            <element signature="e#6128#6705#0" />
+            <element signature="e#6711#7055#0" />
+            <element signature="e#7061#7307#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/model/character/actions/UnitAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="131" column="5" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/factory/BoardFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/factory/CharacterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/factory/DefaultCharacterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="101" selection-start-line="22" selection-start-column="101" selection-end-line="22" selection-end-column="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/factory/IngameKeyBindFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="165" column="1" selection-start-line="165" selection-start-column="1" selection-end-line="165" selection-end-column="1" />
+        <state relative-caret-position="270">
+          <caret line="144" column="48" selection-start-line="144" selection-start-column="48" selection-end-line="144" selection-end-column="48" />
           <folding>
             <element signature="n#!!doc;n#addMoveBinding#0;n#IngameKeyBindFactory#0" />
             <element signature="method#addMoveBinding#0;class#IngameKeyBindFactory#0" />
@@ -1561,100 +1333,139 @@
             <element signature="n#!!doc;n#StartWalking#0;n#IngameKeyBindFactory#0" />
             <element signature="method#StartWalking#0;class#IngameKeyBindFactory#0" />
             <element signature="method#StopWalking#0;class#IngameKeyBindFactory#0" />
-            <element signature="e#2616#2804#0" expanded="true" />
-            <element signature="e#2803#2804#0" expanded="true" />
             <element signature="method#StartRunning#0;class#IngameKeyBindFactory#0" />
             <element signature="method#StopRunning#0;class#IngameKeyBindFactory#0" />
-            <element signature="e#3301#3489#0" expanded="true" />
-            <element signature="e#3488#3489#0" expanded="true" />
             <element signature="method#cursorBtnPressed#0;class#IngameKeyBindFactory#0" />
             <element signature="method#cursorBtnReleased#0;class#IngameKeyBindFactory#0" />
-            <element signature="n#!!doc;n#clearLastKeyPress#0;n#IngameKeyBindFactory#0" />
             <element signature="method#clearLastKeyPress#0;class#IngameKeyBindFactory#0" />
             <element signature="method#calcDirection#0;class#IngameKeyBindFactory#0" />
             <element signature="method#setDelta#0;class#IngameKeyBindFactory#0" />
-            <element signature="n#!!doc;n#escPressed#0;n#IngameKeyBindFactory#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/interfaces/UnitAction.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/factory/MazeBoardFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        <state relative-caret-position="165">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#createBoard#0;class#MazeBoardFactory#0" />
+            <element signature="method#createMap#0;class#MazeBoardFactory#0" />
+            <element signature="method#createBorderWalls#0;class#MazeBoardFactory#0" />
+            <element signature="method#nextStep#0;class#MazeBoardFactory#0" />
+            <element signature="method#takeStep#0;class#MazeBoardFactory#0" />
+            <element signature="method#drawWalls#0;class#MazeBoardFactory#0" />
+            <element signature="method#generateDoors#0;class#MazeBoardFactory#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logic/model/characters/interfaces/Movement.java">
+    <entry file="file://$PROJECT_DIR$/src/logic/factory/MenuKeyBindFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="840">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logic/Textures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="405">
           <caret line="47" column="71" selection-start-line="47" selection-start-column="71" selection-end-line="47" selection-end-column="71" />
+          <folding>
+            <element signature="e#3478#3591#0" />
+            <element signature="e#3597#4010#0" />
+            <element signature="e#4016#5186#0" />
+            <element signature="e#5192#5480#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/Logic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/plugin/Calculation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+          <folding>
+            <element signature="method#possibleWay#0;class#Calculation#0" />
+            <element signature="method#isNextCellRoad#0;class#Calculation#0" />
+            <element signature="method#isExistBranch#0;class#Calculation#0" />
+            <element signature="method#possibleRoute#0;class#Calculation#0" />
+            <element signature="method#checkingNextStep#0;class#Calculation#0" />
+            <element signature="method#getNewPosition#0;class#Calculation#0" />
+            <element signature="method#getRandomizedDirectionList#0;class#Calculation#0" />
+            <element signature="method#getRandomizedDirectionList#1;class#Calculation#0" />
+            <element signature="method#thereIsSomeOneThere#0;class#Calculation#0" />
+            <element signature="method#isThereAnyUnit#0;class#Calculation#0" />
+            <element signature="method#directionOfTarget#0;class#Calculation#0" />
+            <element signature="method#lookForTarget#0;class#Calculation#0" />
+            <element signature="method#createFloorMap#0;class#Calculation#0" />
+            <element signature="method#createWallMap#0;class#Calculation#0" />
+            <element signature="method#getProperTexture#0;class#Calculation#0" />
+            <element signature="method#modifyStartEndTextures#0;class#Calculation#0" />
+            <element signature="method#getProperWall#0;class#Calculation#0" />
+            <element signature="method#whereAreWalls#0;class#Calculation#0" />
+            <element signature="method#isWall#0;class#Calculation#0" />
+            <element signature="method#getRandomFloor#0;class#Calculation#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/plugin/NameGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logic/plugin/Randomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#randomPositionOnEdge#0;class#Randomizer#0" />
+            <element signature="method#randomDirection#0;class#Randomizer#0" />
+            <element signature="method#randomIntInRange#0;class#Randomizer#0" />
+            <element signature="method#randomSpecIntInRange#0;class#Randomizer#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/presenter/LevelPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+        <state relative-caret-position="135">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc;n#createNewMap#0;n#LevelPresenter#0" />
             <element signature="method#initMe#0;class#LevelPresenter#0" />
+            <element signature="method#playerMove#0;class#LevelPresenter#0" />
             <element signature="method#backToMainMenu#0;class#LevelPresenter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="method#addElements#0;class#Level#0" />
-            <element signature="method#setHUD#0;class#Level#0" />
-            <element signature="method#setBar#0;class#Level#0" />
-            <element signature="method#setBoard#0;class#Level#0" />
-            <element signature="method#setCharacters#0;class#Level#0" />
-            <element signature="method#addingElements#0;class#Level#0" />
-            <element signature="method#addEnemies#0;class#Level#0" />
-            <element signature="method#setLabel#0;class#Level#0" />
-            <element signature="e#6691#6708#0" />
-            <element signature="method#resetEnemiesIcons#0;class#Level#0" />
-            <element signature="method#handleKeyPress#0;class#Level#0" />
+            <element signature="method#createTextureMaps#0;class#LevelPresenter#0" />
+            <element signature="method#startCountBack#0;class#LevelPresenter#0" />
+            <element signature="method#nextLevel#0;class#LevelPresenter#0" />
+            <element signature="method#restartLevel#0;class#LevelPresenter#0" />
+            <element signature="method#levelFinished#0;class#LevelPresenter#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/presenter/MenuPresenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="495">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
           <folding>
             <element signature="method#MenuKeyListener#0;class#MenuPresenter#0" />
+            <element signature="n#!!doc;n#loadGameClicked#0;n#MenuPresenter#0" />
+            <element signature="method#loadGameClicked#0;class#MenuPresenter#0" />
+            <element signature="method#saveGameClicked#0;class#MenuPresenter#0" />
+            <element signature="method#randomGameClicked#0;class#MenuPresenter#0" />
             <element signature="method#playBip#0;class#MenuPresenter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
-          <folding>
-            <element signature="e#1371#1372#0" expanded="true" />
-            <element signature="e#1412#1413#0" expanded="true" />
           </folding>
         </state>
       </provider>

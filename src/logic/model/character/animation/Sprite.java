@@ -1,4 +1,4 @@
-package logic.model.characters.animation;
+package logic.model.character.animation;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

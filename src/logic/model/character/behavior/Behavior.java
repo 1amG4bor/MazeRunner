@@ -1,6 +1,6 @@
-package logic.model.characters.behavior;
+package logic.model.character.behavior;
 
-import logic.model.characters.CharacterUnit;
+import logic.model.character.CharacterUnit;
 import logic.model.Board;
 
 public interface Behavior {

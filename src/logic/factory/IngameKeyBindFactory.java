@@ -1,7 +1,7 @@
 package logic.factory;
 
 import logic.model.Direction;
-import logic.model.characters.Player;
+import logic.model.character.unitType.Player;
 import ui.App;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -11,7 +11,6 @@ import java.awt.event.KeyEvent;
 public class IngameKeyBindFactory {
     private JComponent component;
     private Integer pressedMoveKey = null;
-    private int c = 0;
 
     public IngameKeyBindFactory(JComponent component) {
         this.component = component;
@@ -24,13 +23,13 @@ public class IngameKeyBindFactory {
         String actionMapKey = KeyEvent.getKeyText(keyCode);
         actionMapKey += onRelease ? "Released" : "Pressed";
         actionMapKey += (modifier == InputEvent.SHIFT_DOWN_MASK) ? "WithShift" : "WithoutShift";
-        Action action = null;
+        Action action;
         if (modifier == InputEvent.SHIFT_DOWN_MASK) {
             action = onRelease ? StopRunning(keyCode, isVertical, delta) : StartRunning(keyCode, isVertical, delta);
         } else {
             action = onRelease ? StopWalking(keyCode, isVertical, delta) : StartWalking(keyCode, isVertical, delta);
         }
-        component.getInputMap().put(pressedKey, actionMapKey);
+        component.getInputMap(AFC).put(pressedKey, actionMapKey);
         component.getActionMap().put(actionMapKey, action);
     }
     public void addKeyPressBinding(int keyCode, int modifier, boolean onRelease) {
@@ -43,7 +42,7 @@ public class IngameKeyBindFactory {
         } else if (KeyEvent.VK_SPACE == keyCode) {
             action = spacePressed();
         }
-        component.getInputMap().put(pressedKey, actionMapKey);
+        component.getInputMap(AFC).put(pressedKey, actionMapKey);
         component.getActionMap().put(actionMapKey, action);
 
     }
@@ -143,7 +142,7 @@ public class IngameKeyBindFactory {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // todo: show ingameMenu not mainMenu
-                App.switchScreen(App.getGamePanel(), App.getMenuPanel());
+                App.getLevelPresenter().backToMainMenu(0);
             }
         };
     }

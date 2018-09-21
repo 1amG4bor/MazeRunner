@@ -1,18 +1,11 @@
 package logic.plugin;
 
-import logic.model.characters.Enemies;
-import logic.model.characters.Player;
-import logic.Textures;
 import logic.model.Direction;
 import logic.model.Position;
-
-import java.lang.reflect.Field;
 import java.util.Random;
 
 public final class Randomizer {
     private static final Randomizer instance = new Randomizer();
-    private Player player = Player.getInstance();
-    private Enemies enemies = Enemies.getInstance();
 
     private Randomizer() { }
 

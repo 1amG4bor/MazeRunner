@@ -1,4 +1,4 @@
-package logic.model.characters.animation;
+package logic.model.character.animation;
 
 import logic.model.Direction;
 
@@ -42,7 +42,7 @@ public final class FrameLine {
     }
 
     public BufferedImage[] die(Sprite sprite, Direction direction) {
-        return getFrameLine(sprite, 20, 6);
+        return getFrameLine(sprite, 20, 7);
     }
 
     private BufferedImage[] getFrameLine (Sprite sprite, int actionLine, int totalFrame) {

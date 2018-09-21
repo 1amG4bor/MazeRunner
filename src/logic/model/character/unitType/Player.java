@@ -1,9 +1,10 @@
-package logic.model.characters;
+package logic.model.character.unitType;
 
 import logic.Textures;
-import logic.model.characters.animation.Animation;
-import logic.model.characters.animation.FrameLine;
-import logic.model.characters.animation.Sprite;
+import logic.model.character.Human;
+import logic.model.character.animation.Animation;
+import logic.model.character.animation.FrameLine;
+import logic.model.character.animation.Sprite;
 import logic.model.Direction;
 import logic.model.Position;
 import logic.model.item.weapon.Weapon;

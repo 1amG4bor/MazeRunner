@@ -1,6 +1,6 @@
-package logic.model.characters;
+package logic.model.character;
 
-import logic.model.characters.animation.Sprite;
+import logic.model.character.animation.Sprite;
 
 public enum UnitType {
     PLAYER      (new Sprite("player/player_dagger.png")),

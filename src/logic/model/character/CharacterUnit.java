@@ -1,13 +1,14 @@
-package logic.model.characters;
+package logic.model.character;
 
 import logic.model.Direction;
 import logic.model.Position;
-import logic.model.characters.animation.Animation;
-import logic.model.characters.animation.FrameLine;
-import logic.model.characters.animation.Sprite;
-import logic.model.characters.behavior.Behavior;
-import logic.model.characters.interfaces.Movement;
-import logic.model.characters.interfaces.UnitAction;
+import logic.model.character.animation.Animation;
+import logic.model.character.animation.FrameLine;
+import logic.model.character.animation.Sprite;
+import logic.model.character.behavior.Behavior;
+import logic.model.character.actions.Movement;
+import logic.model.character.actions.UnitAction;
+import logic.model.character.unitType.Player;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -57,7 +58,7 @@ public abstract class CharacterUnit extends Movement {
         animDelay = 60 - (speed * 2);
         animation = new Animation(FrameLine.getInstance().idle(getSprite(), getDirection()), 10);
         setActualImg(animation.getSprite());
-//        playAnimationSequence();
+        playAnimationSequence();
         target = new Target(null, null);
     }
 
@@ -219,7 +220,7 @@ public abstract class CharacterUnit extends Movement {
     }
 //endregion
 
-    //region Methods
+    //region Animate Methods
     public void resetAnimation(Animation newAnimation) {
         animation = newAnimation;
         isItAnimated = true;
@@ -249,7 +250,6 @@ public abstract class CharacterUnit extends Movement {
         setCoordinate(getPosition().positionToGfxCoordinate());
         setCurrentShift(new Position(0, 0));
         if (lastAnim) {
-//            setActualImg(getAnimation().getSprite(6));
             setInGame(false);
         }
         if (isInGame()) {
@@ -262,18 +262,17 @@ public abstract class CharacterUnit extends Movement {
             }
 //            isPlayerFinishBoard();
         }
-
     }
 
     private void killCharacter() {
         if (this.equals(Player.getInstance())) {
-            System.out.println("player has died");
+//            msgbox("You've died!");
             setInGame(false);
 
-//            msgbox("You've died!");
         } else {
-            System.out.println(this + " died");
             Enemies.getInstance().deleteUnit(this);
+            animation.stop();
+            animationTimer.stop();
             Player.getInstance().addXp(100);
         }
 

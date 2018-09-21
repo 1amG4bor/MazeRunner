@@ -1,9 +1,7 @@
-package logic.model.characters.behavior;
+package logic.model.character.behavior;
 
 import logic.model.Board;
-import logic.model.characters.CharacterUnit;
-import logic.model.characters.Human;
-import logic.model.characters.unitTypes.TestEnemy;
+import logic.model.character.CharacterUnit;
 import logic.plugin.Randomizer;
 
 public class GuardingBehavior implements Behavior {

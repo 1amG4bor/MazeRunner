@@ -1,6 +1,7 @@
 package ui;
 
 import logic.model.Board;
+import presenter.LevelPresenter;
 import ui.model.GameScreen;
 import ui.model.MenuScreen;
 
@@ -10,13 +11,14 @@ import java.util.ArrayList;
 
 public final class App extends JFrame {
     private static final App instance = new App();
-    private int appW;
-    private int appH;
+    private static int appW;
+    private static int appH;
     private static MenuScreen menuPanel;
     private static GameScreen gamePanel;
+    private static LevelPresenter levelPresenter;
     private static ArrayList<Board> levelList = new ArrayList<>();
-    public static Font fontAegean12 = new Font("Aegean", Font.PLAIN, 12);
-    public static Font fontAegean18 = new Font("Aegean", Font.BOLD, 18);
+    static Font fontAegean12 = new Font("Aegean", Font.PLAIN, 12);
+    static Font fontAegean18 = new Font("Aegean", Font.BOLD, 18);
 
     public static App getInstance() {
         return instance;
@@ -25,26 +27,31 @@ public final class App extends JFrame {
         initUI();
     }
 
-    // region Getters
-    public int getAppW() {
+    // region Getters & Setters
+    static int getAppW() {
         return appW;
     }
-    public int getAppH() {
+    static int getAppH() {
         return appH;
     }
+    private void setAppW(int appW) {
+        App.appW = appW;
+    }
+    private void setAppH(int appH) {
+        App.appH = appH;
+    }
+
     public static MenuScreen getMenuPanel() {
         return menuPanel;
     }
     public static GameScreen getGamePanel() {
         return gamePanel;
     }
-    // endregion
-    // region Setters
-    public void setAppW(int appW) {
-        this.appW = appW;
+    public static LevelPresenter getLevelPresenter() {
+        return levelPresenter;
     }
-    public void setAppH(int appH) {
-        this.appH = appH;
+    static void setLevelPresenter(LevelPresenter levelPresenter) {
+        App.levelPresenter = levelPresenter;
     }
     // endregion
 
@@ -54,12 +61,11 @@ public final class App extends JFrame {
         Dimension appDimension = new Dimension(appW, appH);
         gamePanel = new GameScreen(appDimension);
         add(gamePanel);
-
         menuPanel = new MenuScreen(appDimension);
         menuPanel.add(new Menu());
         add(menuPanel);
         // start game
-        menuPanel.setVisible(true);
+        switchScreen(gamePanel, menuPanel);
     }
 
     private void setMainFrame() {
@@ -69,18 +75,8 @@ public final class App extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new CardLayout());
         GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-        setAppW((int) gd.getDisplayMode().getWidth());
-        setAppH((int) gd.getDisplayMode().getHeight());
-    }
-
-    private JPanel initPanel() {
-        JPanel panel = new JPanel();
-        panel.setOpaque(false);
-        panel.setPreferredSize(new Dimension(appW, appH));
-        panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
-        panel.setBackground(Color.BLACK);
-        panel.setVisible(false);
-        return panel;
+        setAppW(gd.getDisplayMode().getWidth());
+        setAppH(gd.getDisplayMode().getHeight());
     }
 
     public static void main(String[] args) {
@@ -95,15 +91,15 @@ public final class App extends JFrame {
     public static Board getCurrentLevel() {
         return levelList.get(levelList.size() - 1);
     }
+
     public static void addLevel(Board board) {
         levelList.add(board);
     }
+
     public static void switchScreen(JPanel hide, JPanel show) {
         show.requestFocusInWindow();
         show.setVisible(true);
         hide.setVisible(false);
     }
-
     // endregion
-
 }

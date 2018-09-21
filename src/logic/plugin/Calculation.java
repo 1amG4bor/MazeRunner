@@ -1,9 +1,9 @@
 package logic.plugin;
 
-import logic.model.characters.CharacterUnit;
-import logic.model.characters.Enemies;
-import logic.model.characters.Player;
-import logic.model.characters.Target;
+import logic.model.character.CharacterUnit;
+import logic.model.character.Enemies;
+import logic.model.character.unitType.Player;
+import logic.model.character.Target;
 import logic.Textures;
 import logic.model.CellType;
 import logic.model.Direction;
@@ -14,7 +14,6 @@ import java.util.*;
 
 public final class Calculation {
     private static final Calculation instance = new Calculation();
-    private Player player = Player.getInstance();
     private Enemies enemies = Enemies.getInstance();
 
     private Calculation() {

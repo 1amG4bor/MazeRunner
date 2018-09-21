@@ -1,16 +1,7 @@
-package logic.model.characters;
+package logic.model.character;
 
-import logic.Textures;
-import logic.model.Direction;
 import logic.model.Position;
-import logic.model.characters.unitTypes.TestEnemy;
-import logic.model.item.weapon.Weapon;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import java.util.Timer;
 
 public final class Enemies {
     public static final Enemies enemies = new Enemies();
@@ -50,6 +41,7 @@ public final class Enemies {
 
     public void killEmAll() {
         units.clear();
+        units = new ArrayList<>();
     }
 
     public CharacterUnit getUnitByPosition(Position position) {

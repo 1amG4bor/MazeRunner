@@ -1,10 +1,8 @@
 package logic.model;
 
 import logic.GameLevels;
-import logic.model.characters.Player;
 import logic.plugin.Calculation;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

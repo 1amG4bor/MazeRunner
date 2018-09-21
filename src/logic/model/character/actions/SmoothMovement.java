@@ -1,12 +1,12 @@
-package logic.model.characters.interfaces;
+package logic.model.character.actions;
 
 import logic.model.Board;
 import logic.model.CellType;
 import logic.model.Position;
-import logic.model.characters.CharacterUnit;
-import logic.model.characters.Player;
-import logic.model.characters.animation.Animation;
-import logic.model.characters.animation.FrameLine;
+import logic.model.character.CharacterUnit;
+import logic.model.character.unitType.Player;
+import logic.model.character.animation.Animation;
+import logic.model.character.animation.FrameLine;
 import logic.plugin.Calculation;
 
 // TODO: 2018.09.18. - not working properly

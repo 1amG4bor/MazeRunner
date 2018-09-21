@@ -1,14 +1,13 @@
-package logic.model.characters.unitTypes;
+package logic.model.character.unitType;
 
-import logic.model.characters.*;
+import logic.model.character.*;
 import logic.model.Direction;
 import logic.model.Position;
 import logic.model.Board;
-import logic.model.characters.animation.Animation;
-import logic.model.characters.animation.FrameLine;
-import logic.model.characters.animation.Sprite;
-import logic.model.characters.behavior.*;
-
+import logic.model.character.animation.Animation;
+import logic.model.character.animation.FrameLine;
+import logic.model.character.animation.Sprite;
+import logic.model.character.behavior.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -47,6 +46,7 @@ public class TestEnemy extends Human implements ActionListener {
         if (isInGame() && !lastAnim) {
             if (getHealth() <= 0) {
                 goDie();
+                ((Timer) e.getSource()).stop();
             } else if (!isItAnimated) {
                 goWatch(onBoard);
                 if (!hasTarget()) {
