@@ -11,7 +11,9 @@ If you want to try game the following information could be helpful.
 - **Used programs:**
   - IntelliJ IDEA Comm. Edition
   - GNU image manipulation program
-  - Pik
+  - PikoPixel
+  - Tiled
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjI2MDQ3MjFdfQ==
+eyJoaXN0b3J5IjpbMTA3OTAwODc2MV19
 -->
