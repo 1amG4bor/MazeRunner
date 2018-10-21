@@ -10,9 +10,8 @@ If you want to try game the following information could be helpful.
 - **My hardware config:** *Intel® Core™ i5-7200U x64 / 8GB RAM / 120gb SSD / Intel® HD Graphics 620*
 - **Used programs:**
   - IntelliJ IDEA Comm. Edition
-2D - Top view, RPG-like game in randomly generated labyrinth.
-
-This desktop application will be a platform independent fullscreen size 2D RPG game.
+  - GNU image manipulation program
+  - Pik
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NzEzODc3NF19
+eyJoaXN0b3J5IjpbLTEzNjI2MDQ3MjFdfQ==
 -->
