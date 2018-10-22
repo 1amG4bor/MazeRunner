@@ -36,15 +36,15 @@ If you want to try game the following information could be helpful.
  - [ ] Refactor the whole project & create MVP-model for the next generation display
  - [ ] Create 'Factories' to make the board and the  characters
  - [ ] Implement minimal AI to create moving and fighting behavior for the enemy non-player character.
- - [ ] Draw the map and the character with Java Swing API (top-down view)
+ - [ ] Draw the map and characters with Java Swing API (top-down view)
  - [ ] 
  - [ ] New Graphics design (avatar + hud / new textures)
  - [ ] 
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMzNzA0MTUxLDE2MDMyNzMwNDksMTgzMT
-M0NzI2MCwtMTkwNTkxMjExNywxODczMzU3NTMzLDIwNTgyOTQ5
-MTYsMzY0NzQwMzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMT
-A3OTAwODc2MV19
+eyJoaXN0b3J5IjpbMTY1ODI4Mjc3MywxNjAzMjczMDQ5LDE4Mz
+EzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0
+OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LD
+EwNzkwMDg3NjFdfQ==
 -->
