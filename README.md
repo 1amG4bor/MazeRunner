@@ -11,9 +11,6 @@ If you want to try game the following information could be helpful.
 - Java version "1.8.0_181"
 - IntelliJ, Eclipse or other IDE *(.JAR file has not included)*
 
-
-
-
  **Used programs:**
   - IntelliJ IDEA Comm. Edition
   - GNU image manipulation program
@@ -22,7 +19,7 @@ If you want to try game the following information could be helpful.
   - Audacity
 ### Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MTQzNjg0NiwyMDU4Mjk0OTE2LDM2ND
-c0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LDEwNzkwMDg3
-NjFdfQ==
+eyJoaXN0b3J5IjpbLTEyNDAyNjY0MjQsMjA1ODI5NDkxNiwzNj
+Q3NDAzMjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4
+NzYxXX0=
 -->
