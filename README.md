@@ -33,12 +33,13 @@ If you want to try game the following information could be helpful.
  - [x] Create the gameboard with recursive generate algorithm
  - [x] Draw board in terminal than draw it  with java.awt.Graphics2D API
  - [x] Implement the moving in the maze with validation
- - [ ] Refactor the whole project & 
+ - [ ] Refactor the whole project & create MVP-model for the next generation display
+ - [ ] Draw the map and character with Java Swing API
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDc4Mjc3MDksMTgzMTM0NzI2MCwtMT
-kwNTkxMjExNywxODczMzU3NTMzLDIwNTgyOTQ5MTYsMzY0NzQw
-MzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2MV
-19
+eyJoaXN0b3J5IjpbMTYwMzI3MzA0OSwxODMxMzQ3MjYwLC0xOT
+A1OTEyMTE3LDE4NzMzNTc1MzMsMjA1ODI5NDkxNiwzNjQ3NDAz
+MjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4NzYxXX
+0=
 -->
