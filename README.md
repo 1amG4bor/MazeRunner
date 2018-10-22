@@ -19,13 +19,13 @@ If you want to try game the following information could be helpful.
  - Audacity
 ## Evolution (versions)
 1. Terminal/Console version
-
+![enter image description here](https://picasaweb.google.com/117611765401937845574/6615121252569087377#6615121255551400386 "First version &#40;v-0.1&#41;")
 2. Basic window app (Java 2D-graphics)
 
 3. Full-screen app (Java Swing)
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mjk1NTgwNzEsLTE5MDU5MTIxMTcsMT
-g3MzM1NzUzMywyMDU4Mjk0OTE2LDM2NDc0MDMyOCwxMDgyNDAy
-MjkyLC0xOTk4OTI5MzI1LDEwNzkwMDg3NjFdfQ==
+eyJoaXN0b3J5IjpbMTQ1NDAwMDA2OSwtMTkwNTkxMjExNywxOD
+czMzU3NTMzLDIwNTgyOTQ5MTYsMzY0NzQwMzI4LDEwODI0MDIy
+OTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2MV19
 -->
