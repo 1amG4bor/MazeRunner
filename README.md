@@ -35,7 +35,7 @@ If you want to try game the following information could be helpful.
  - [x] Implement the moving in the maze with validation
  - [ ] Refactor the whole project & create MVP-model for the next generation display
  - [ ] Create 'Factories' to make the board and the  characters
- - [ ] Implement minimal AI for 
+ - [ ] Implement minimal AI to create moving and fighting behavior for the enemy character.
  - [ ] Draw the map and the character with Java Swing API (top-down view)
  - [ ] 
  - [ ] New Graphics design (avatar + hud / new textures)
@@ -43,8 +43,8 @@ If you want to try game the following information could be helpful.
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjU4OTM4MTQsMTYwMzI3MzA0OSwxOD
-MxMzQ3MjYwLC0xOTA1OTEyMTE3LDE4NzMzNTc1MzMsMjA1ODI5
-NDkxNiwzNjQ3NDAzMjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNS
-wxMDc5MDA4NzYxXX0=
+eyJoaXN0b3J5IjpbLTEwMjQ0MzIzNCwxNjAzMjczMDQ5LDE4Mz
+EzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0
+OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LD
+EwNzkwMDg3NjFdfQ==
 -->
