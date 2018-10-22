@@ -11,15 +11,17 @@ If you want to try game the following information could be helpful.
 - Java version "1.8.0_181"
 - IntelliJ, Eclipse or other IDE *(.JAR file has not included)*
 
- **Used programs:**
+### Used programs:
   - IntelliJ IDEA Comm. Edition
   - GNU image manipulation program
   - PikoPixel
   - Tiled
   - Audacity
-### Author:  'G4bor'
+## Version
+
+## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDAyNjY0MjQsMjA1ODI5NDkxNiwzNj
-Q3NDAzMjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4
-NzYxXX0=
+eyJoaXN0b3J5IjpbNzI0MzMwOTgwLDIwNTgyOTQ5MTYsMzY0Nz
+QwMzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2
+MV19
 -->
