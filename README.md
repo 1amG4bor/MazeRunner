@@ -30,15 +30,15 @@ If you want to try game the following information could be helpful.
 
 ## Backlog to Featur
 
- - [ ] Create the gameboard with recursive generate algorithm
- - [ ] Draw board in terminal than draw it  with java.awt.Graphics2D API
- - [ ] Implement the moving in the maze with va
- - [ ] 
+ - [x] Create the gameboard with recursive generate algorithm
+ - [x] Draw board in terminal than draw it  with java.awt.Graphics2D API
+ - [x] Implement the moving in the maze with validation
+ - [ ] Refactor the whole project & 
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA1MzgyMDI0LDE4MzEzNDcyNjAsLTE5MD
-U5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0OTE2LDM2NDc0MDMy
-OCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LDEwNzkwMDg3NjFdfQ
-==
+eyJoaXN0b3J5IjpbLTExMDc4Mjc3MDksMTgzMTM0NzI2MCwtMT
+kwNTkxMjExNywxODczMzU3NTMzLDIwNTgyOTQ5MTYsMzY0NzQw
+MzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2MV
+19
 -->
