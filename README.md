@@ -5,15 +5,16 @@ For the graphic display I used some freeware sprite, pixel-Art and graphics-set 
 
 ## Getting Started ##
 If you want to try game the following information could be helpful.
-### Development environment: ###
+### Development/test environment: ###
 - **Operation system:** *Ubuntu 18.04.1 LTS*
-- **My hardware config:** *Intel® Core™ i5-7200U x64 / 8GB RAM / 120gb SSD / Intel® HD Graphics 620*
+- **Hardware config:** *Intel® Core™ i5-7200U x64 / 8GB RAM / 120gb SSD / Intel® HD Graphics 620*
 - **Used programs:**
   - IntelliJ IDEA Comm. Edition
   - GNU image manipulation program
   - PikoPixel
   - Tiled
+  - Audacity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNjIzODQ5OSwxMDc5MDA4NzYxXX0=
+eyJoaXN0b3J5IjpbLTE5OTg5MjkzMjUsMTA3OTAwODc2MV19
 -->
