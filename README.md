@@ -31,13 +31,13 @@ If you want to try game the following information could be helpful.
 ## Backlog to Featur
 
  - [ ] Create the gameboard with recursive generate algorithm
- - [ ] Draw board in terminal
+ - [ ] Draw board in terminal than draw it  with Graph
  - [ ] Implement moving in the maze
  - [ ] 
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NTU5ODk2NSwxODMxMzQ3MjYwLC0xOT
+eyJoaXN0b3J5IjpbLTU3ODA1MDA4OSwxODMxMzQ3MjYwLC0xOT
 A1OTEyMTE3LDE4NzMzNTc1MzMsMjA1ODI5NDkxNiwzNjQ3NDAz
 MjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4NzYxXX
 0=
