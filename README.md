@@ -41,12 +41,13 @@ If you want to try game the following information could be helpful.
  - [x] More and more behavior pattern for NPC
  - [x] Different enemy types
  - [x] Create figth-system (close-combat)
- - [ ] in-game menu 
+ - [ ] in-game menu & own message-box
+ - [ ] Keys and swithes to open doors / 
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ0Mjk2NDc2LDE2MDMyNzMwNDksMTgzMT
-M0NzI2MCwtMTkwNTkxMjExNywxODczMzU3NTMzLDIwNTgyOTQ5
-MTYsMzY0NzQwMzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMT
-A3OTAwODc2MV19
+eyJoaXN0b3J5IjpbMTQ2NjU5MDY2MSwxNjAzMjczMDQ5LDE4Mz
+EzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0
+OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LD
+EwNzkwMDg3NjFdfQ==
 -->
