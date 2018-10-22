@@ -46,7 +46,7 @@ If you want to try game the following information could be helpful.
  - [ ] music & sound effects
  - [ ] load / save game
  - [ ] avatar/character creator
- - [ ] complex cast system (race, gender, skills, specialities)
+ - [ ] complex cast system (race, gender, skills, special abilities)
  - [ ] multiplayer-mode
  - [ ] arena (place) to improve skills
  - [ ] Isometric view (3D feeling)
@@ -55,8 +55,8 @@ If you want to try game the following information could be helpful.
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTc2MzQyNjksMTIxMzg4NjU2MCwxNj
-AzMjczMDQ5LDE4MzEzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1
-NzUzMywyMDU4Mjk0OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC
-0xOTk4OTI5MzI1LDEwNzkwMDg3NjFdfQ==
+eyJoaXN0b3J5IjpbMTM0MjM4NDMyMSwxMjEzODg2NTYwLDE2MD
+MyNzMwNDksMTgzMTM0NzI2MCwtMTkwNTkxMjExNywxODczMzU3
+NTMzLDIwNTgyOTQ5MTYsMzY0NzQwMzI4LDEwODI0MDIyOTIsLT
+E5OTg5MjkzMjUsMTA3OTAwODc2MV19
 -->
