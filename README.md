@@ -43,18 +43,19 @@ If you want to try game the following information could be helpful.
  - [x] Create figth-system (close-combat)
  - [ ] in-game menu & own message-box
  - [ ] Keys and swithes to open doors / switch off traps
+ - [ ] music & sound effects
  - [ ] load / save game
  - [ ] avatar/character creator
  - [ ] complex cast system (race, gender, skills, specialities)
  - [ ] multiplayer-mode
- - [ ] 
  - [ ] arena (place) to improve skills
  - [ ] Isometric view (3D feeling)
- - [ ] ... and so much more
+ - [ ] mobile-version
+ - [ ] ... and so much more :)
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4ODc2Mjk4NCwxMjEzODg2NTYwLDE2MD
+eyJoaXN0b3J5IjpbMTQ2MzE2NTg5OSwxMjEzODg2NTYwLDE2MD
 MyNzMwNDksMTgzMTM0NzI2MCwtMTkwNTkxMjExNywxODczMzU3
 NTMzLDIwNTgyOTQ5MTYsMzY0NzQwMzI4LDEwODI0MDIyOTIsLT
 E5OTg5MjkzMjUsMTA3OTAwODc2MV19
