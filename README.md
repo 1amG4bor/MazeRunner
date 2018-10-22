@@ -23,10 +23,13 @@ If you want to try game the following information could be helpful.
 2. Basic window app (Java 2D-graphics)
 ![enter image description here](https://lh3.googleusercontent.com/1RbK8zzNRatq1NsrlBrmSTNhYIi4PADGFs0j5wQ0lgA5UcA_M5MeEG2_nAhS6GYR5x6gj0kdxSJU "Second version &#40;v-0.1&#41;")
 3. Full-screen app (Java Swing)
+*The version for live presentation in 'Flow Academy'*
+![enter image description here](https://lh3.googleusercontent.com/uSLD3vCZe8Cx3fH2pbIM399TYBfzx_T-PnxgLL7l-1r62CfYOOzHxuLlaFzT6GAdgaw_Myxg3BHw "Main menu")
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMTM0NzI2MCwtMTkwNTkxMjExNywxOD
-czMzU3NTMzLDIwNTgyOTQ5MTYsMzY0NzQwMzI4LDEwODI0MDIy
-OTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2MV19
+eyJoaXN0b3J5IjpbMTkwODA5NDgxLDE4MzEzNDcyNjAsLTE5MD
+U5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0OTE2LDM2NDc0MDMy
+OCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LDEwNzkwMDg3NjFdfQ
+==
 -->
