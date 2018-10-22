@@ -1,4 +1,4 @@
-# MazeRunner
+# Maze Runner
 This project **'will'** make a platform independent desktop game application. Currently it is a 2D top-down view (¾) RPG-like game that is played in a randomly generated labyrinth.
 For the graphic display I used some freeware sprite, pixel-Art and graphics-set drafts.
 *(These will be listed in the end of the page)*
@@ -6,7 +6,7 @@ For the graphic display I used some freeware sprite, pixel-Art and graphics-set 
 If you want to try game the following information could be helpful.
 ### Development/test environment: ###
 - **Operation system:** *Ubuntu 18.04.1 LTS*
-- **Hardware config:** *Intel® Core™ i5-7200U x64 / 8GB RAM / 120gb SSD / Intel® HD Graphics 620*
+- **Hardware configuration:** *Intel® Core™ i5-7200U x64 / 8GB RAM / 120gb SSD / Intel® HD Graphics 620*
 ### Prerequisites
 - Java version "1.8.0_181"
 - IntelliJ, Eclipse or other IDE *(.JAR file has not included)*
@@ -30,19 +30,19 @@ If you want to try game the following information could be helpful.
 
 ## Backlog to Feature
 
- - [x] Create the gameboard with recursive generate algorithm
+ - [x] Create the game-board with recursive generate algorithm
  - [x] Draw board in terminal than draw it  with java.awt.Graphics2D API
  - [x] Implement the moving in the maze with validation
  - [x] Refactor the whole project & create MVP-model for the next generation display
  - [x] Create 'Factories' to make the board and the  characters
  - [x] Implement minimal AI to create moving and fighting behavior for the enemy non-player character.
  - [x] Draw the map and characters with Java Swing API (top-down view)
- - [x] New Graphics design (avatar + hud / new textures)
+ - [x] New Graphics design (avatar + HUD / new textures)
  - [x] More and more behavior pattern for NPC
  - [x] Different enemy types
- - [x] Create figth-system (close-combat)
+ - [x] Create fight-system (close-combat)
  - [ ] in-game menu & own message-box
- - [ ] Keys and swithes to open doors / switch off traps
+ - [ ] Keys and switches to open doors / switch off traps
  - [ ] music & sound effects
  - [ ] load / save game
  - [ ] avatar/character creator
@@ -55,8 +55,8 @@ If you want to try game the following information could be helpful.
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MzE2NTg5OSwxMjEzODg2NTYwLDE2MD
-MyNzMwNDksMTgzMTM0NzI2MCwtMTkwNTkxMjExNywxODczMzU3
-NTMzLDIwNTgyOTQ5MTYsMzY0NzQwMzI4LDEwODI0MDIyOTIsLT
-E5OTg5MjkzMjUsMTA3OTAwODc2MV19
+eyJoaXN0b3J5IjpbLTIwNTc2MzQyNjksMTIxMzg4NjU2MCwxNj
+AzMjczMDQ5LDE4MzEzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1
+NzUzMywyMDU4Mjk0OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC
+0xOTk4OTI5MzI1LDEwNzkwMDg3NjFdfQ==
 -->
