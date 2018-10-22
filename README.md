@@ -18,13 +18,13 @@ If you want to try game the following information could be helpful.
  - Tiled
  - Audacity
 ## Evolution (versions)
- - [ ] List item
+1. Terminal/Console version
 
-Terminal/Console version
-2. Basic window app (Java 2D-graphics)
+3. Basic window app (Java 2D-graphics)
+4. Full-screen app (Java Swing)
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjY1MTk1MTUsMjA1ODI5NDkxNiwzNj
-Q3NDAzMjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4
-NzYxXX0=
+eyJoaXN0b3J5IjpbMTg3MzM1NzUzMywyMDU4Mjk0OTE2LDM2ND
+c0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LDEwNzkwMDg3
+NjFdfQ==
 -->
