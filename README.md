@@ -46,11 +46,12 @@ If you want to try game the following information could be helpful.
  - [ ] load / save game
  - [ ] avatar/character creator
  - [ ] complex cast system (race, gender, skills, specialities)
- - [ ] arena / place to improve skills
+ - [ ] arena (place) to improve skills
+ - [ ] Isometric view (3D )
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIxMzQzNDc3LDEyMTM4ODY1NjAsMTYwMz
+eyJoaXN0b3J5IjpbMzUwOTY3MzYwLDEyMTM4ODY1NjAsMTYwMz
 I3MzA0OSwxODMxMzQ3MjYwLC0xOTA1OTEyMTE3LDE4NzMzNTc1
 MzMsMjA1ODI5NDkxNiwzNjQ3NDAzMjgsMTA4MjQwMjI5MiwtMT
 k5ODkyOTMyNSwxMDc5MDA4NzYxXX0=
