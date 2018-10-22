@@ -28,24 +28,25 @@ If you want to try game the following information could be helpful.
 
 ![enter image description here](https://lh3.googleusercontent.com/j8-iPGlXanTJkKvsgXPINw71unLcAYjdQtgJ9RWrf__7jpWxnXMWzhjIkpeGCmCEaXf-P7btW7FT "Fight in the maze &#40;screenshot&#41;")
 
-## Backlog to Featur
+## Backlog to Featur (main )
 
  - [x] Create the gameboard with recursive generate algorithm
  - [x] Draw board in terminal than draw it  with java.awt.Graphics2D API
  - [x] Implement the moving in the maze with validation
- - [ ] Refactor the whole project & create MVP-model for the next generation display
- - [ ] Create 'Factories' to make the board and the  characters
- - [ ] Implement minimal AI to create moving and fighting behavior for the enemy non-player character.
- - [ ] Draw the map and characters with Java Swing API (top-down view)
- - [ ] New Graphics design (avatar + hud / new textures)
- - [ ] More and more behavior pattern for NPC
- - [ ] Different enemy types
- - [ ] Create 
+ - [x] Refactor the whole project & create MVP-model for the next generation display
+ - [x] Create 'Factories' to make the board and the  characters
+ - [x] Implement minimal AI to create moving and fighting behavior for the enemy non-player character.
+ - [x] Draw the map and characters with Java Swing API (top-down view)
+ - [x] New Graphics design (avatar + hud / new textures)
+ - [x] More and more behavior pattern for NPC
+ - [x] Different enemy types
+ - [x] Create figth-system (close-combat)
+ - [ ] 
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU0MzkxNjM5LDE2MDMyNzMwNDksMTgzMT
-M0NzI2MCwtMTkwNTkxMjExNywxODczMzU3NTMzLDIwNTgyOTQ5
-MTYsMzY0NzQwMzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMT
-A3OTAwODc2MV19
+eyJoaXN0b3J5IjpbMTQ5MjUxNzg0NiwxNjAzMjczMDQ5LDE4Mz
+EzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0
+OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LD
+EwNzkwMDg3NjFdfQ==
 -->
