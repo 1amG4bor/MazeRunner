@@ -12,16 +12,17 @@ If you want to try game the following information could be helpful.
 - IntelliJ, Eclipse or other IDE *(.JAR file has not included)*
 
 ### Used programs:
-  - IntelliJ IDEA Comm. Edition
-  - GNU image manipulation program
-  - PikoPixel
-  - Tiled
-  - Audacity
-## Version
-
+ - IntelliJ IDEA Comm. Edition
+ - GNU image manipulation program
+ - PikoPixel
+ - Tiled
+ - Audacity
+## Evolution (versions)
+1. Terminal/Console version
+2. Basiv
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI0MzMwOTgwLDIwNTgyOTQ5MTYsMzY0Nz
+eyJoaXN0b3J5IjpbNDkyNzcwNDQ5LDIwNTgyOTQ5MTYsMzY0Nz
 QwMzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2
 MV19
 -->
