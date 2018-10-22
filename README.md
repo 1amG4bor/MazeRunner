@@ -21,8 +21,8 @@ If you want to try game the following information could be helpful.
   - PikoPixel
   - Tiled
   - Audacity
-
+### Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY0NzQwMzI4LDEwODI0MDIyOTIsLTE5OT
-g5MjkzMjUsMTA3OTAwODc2MV19
+eyJoaXN0b3J5IjpbMjA1ODI5NDkxNiwzNjQ3NDAzMjgsMTA4Mj
+QwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4NzYxXX0=
 -->
