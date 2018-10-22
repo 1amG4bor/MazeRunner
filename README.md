@@ -26,10 +26,13 @@ If you want to try game the following information could be helpful.
 *The version for live presentation in 'Flow Academy'*
 ![enter image description here](https://lh3.googleusercontent.com/uSLD3vCZe8Cx3fH2pbIM399TYBfzx_T-PnxgLL7l-1r62CfYOOzHxuLlaFzT6GAdgaw_Myxg3BHw "Main menu")
 
+![enter image description here](https://lh3.googleusercontent.com/j8-iPGlXanTJkKvsgXPINw71unLcAYjdQtgJ9RWrf__7jpWxnXMWzhjIkpeGCmCEaXf-P7btW7FT "Fight in the maze &#40;screenshot&#41;")
+
+
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwODA5NDgxLDE4MzEzNDcyNjAsLTE5MD
-U5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0OTE2LDM2NDc0MDMy
-OCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LDEwNzkwMDg3NjFdfQ
-==
+eyJoaXN0b3J5IjpbLTEwNDk2MzQ4MjYsMTgzMTM0NzI2MCwtMT
+kwNTkxMjExNywxODczMzU3NTMzLDIwNTgyOTQ5MTYsMzY0NzQw
+MzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2MV
+19
 -->
