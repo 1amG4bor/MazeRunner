@@ -9,7 +9,8 @@ If you want to try game the following information could be helpful.
 - **Operation system:** *Ubuntu 18.04.1 LTS*
 - **Hardware config:** *Intel® Core™ i5-7200U x64 / 8GB RAM / 120gb SSD / Intel® HD Graphics 620*
 ### Prerequisites
-
+Java version "1.8.0_181"
+IntelliJ, Eclipse or other IDE (no .JAR included)
 
 
 
@@ -22,6 +23,6 @@ If you want to try game the following information could be helpful.
   - Audacity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMD
-c5MDA4NzYxXX0=
+eyJoaXN0b3J5IjpbLTY5NTM1NDUxMiwxMDgyNDAyMjkyLC0xOT
+k4OTI5MzI1LDEwNzkwMDg3NjFdfQ==
 -->
