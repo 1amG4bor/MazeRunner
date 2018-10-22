@@ -45,12 +45,12 @@ If you want to try game the following information could be helpful.
  - [ ] Keys and swithes to open doors / switch off traps
  - [ ] load / save game
  - [ ] avatar/character creator
- - [ ] complex cast system (race/s )
+ - [ ] complex cast system (race,  )
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMzg4NjU2MCwxNjAzMjczMDQ5LDE4Mz
-EzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0
-OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LD
-EwNzkwMDg3NjFdfQ==
+eyJoaXN0b3J5IjpbLTIwNzQwNzQxOTIsMTIxMzg4NjU2MCwxNj
+AzMjczMDQ5LDE4MzEzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1
+NzUzMywyMDU4Mjk0OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC
+0xOTk4OTI5MzI1LDEwNzkwMDg3NjFdfQ==
 -->
