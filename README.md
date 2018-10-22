@@ -34,7 +34,8 @@ If you want to try game the following information could be helpful.
  - [x] Draw board in terminal than draw it  with java.awt.Graphics2D API
  - [x] Implement the moving in the maze with validation
  - [ ] Refactor the whole project & create MVP-model for the next generation display
- - [ ] Create 'Factories'
+ - [ ] Create 'Factories' to make the board and the  characters
+ - [ ] Implement minimal AI for 
  - [ ] Draw the map and the character with Java Swing API (top-down view)
  - [ ] 
  - [ ] New Graphics design (avatar + hud / new textures)
@@ -42,8 +43,8 @@ If you want to try game the following information could be helpful.
 
 ## Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3OTk3MzkyLDE2MDMyNzMwNDksMTgzMT
-M0NzI2MCwtMTkwNTkxMjExNywxODczMzU3NTMzLDIwNTgyOTQ5
-MTYsMzY0NzQwMzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMT
-A3OTAwODc2MV19
+eyJoaXN0b3J5IjpbLTE0MjU4OTM4MTQsMTYwMzI3MzA0OSwxOD
+MxMzQ3MjYwLC0xOTA1OTEyMTE3LDE4NzMzNTc1MzMsMjA1ODI5
+NDkxNiwzNjQ3NDAzMjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNS
+wxMDc5MDA4NzYxXX0=
 -->
