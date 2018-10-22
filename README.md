@@ -1,5 +1,5 @@
 # MazeRunner
-This project will make a platform independent desktop game application. Currently it is a 2D top-down view (¾) RPG-like game that is played in a randomly generated labyrinth.
+This project **'will'** make a platform independent desktop game application. Currently it is a 2D top-down view (¾) RPG-like game that is played in a randomly generated labyrinth.
 For the graphic display I used some freeware sprite, pixel-Art and graphics-set drafts.
 *(These will be listed in the end of the page)*
 
@@ -23,6 +23,7 @@ If you want to try game the following information could be helpful.
   - Audacity
 ### Author:  'G4bor'
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1ODI5NDkxNiwzNjQ3NDAzMjgsMTA4Mj
-QwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4NzYxXX0=
+eyJoaXN0b3J5IjpbMTkyMDQ1NzkyMCwyMDU4Mjk0OTE2LDM2ND
+c0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LDEwNzkwMDg3
+NjFdfQ==
 -->
