@@ -8,7 +8,8 @@ If you want to try game the following information could be helpful.
 ### Development/test environment: ###
 - **Operation system:** *Ubuntu 18.04.1 LTS*
 - **Hardware config:** *Intel® Core™ i5-7200U x64 / 8GB RAM / 120gb SSD / Intel® HD Graphics 620*
-### Installation
+### Prerequisites
+
 
 
 
@@ -21,6 +22,6 @@ If you want to try game the following information could be helpful.
   - Audacity
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzU0MjE2OTMsLTE5OTg5MjkzMjUsMT
-A3OTAwODc2MV19
+eyJoaXN0b3J5IjpbMTA4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMD
+c5MDA4NzYxXX0=
 -->
