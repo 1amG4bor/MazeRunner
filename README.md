@@ -66,12 +66,13 @@ If you want to try game the following information could be helpful.
  - https://pngtree.com/freepng/avatar-game_2428177.html
  - https://opengameart.org/content/rts-status-indicator
  
- *Thank you for coming and read me. :)
- I hope you enjoyed what you see and come back for latest news & development in the future*
+ *Thank you for coming and read me :)
+ I hope you enjoyed it and come back for the latest news*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAwMzA3OTI3LDE0Nzc0MzQ1MTIsMjU5Mz
-M4NzU2LDEwNjk0NDE1MjcsMTM0MjM4NDMyMSwxMjEzODg2NTYw
-LDE2MDMyNzMwNDksMTgzMTM0NzI2MCwtMTkwNTkxMjExNywxOD
-czMzU3NTMzLDIwNTgyOTQ5MTYsMzY0NzQwMzI4LDEwODI0MDIy
-OTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2MV19
+eyJoaXN0b3J5IjpbMjA2ODk3NDc1NSw1MDAzMDc5MjcsMTQ3Nz
+QzNDUxMiwyNTkzMzg3NTYsMTA2OTQ0MTUyNywxMzQyMzg0MzIx
+LDEyMTM4ODY1NjAsMTYwMzI3MzA0OSwxODMxMzQ3MjYwLC0xOT
+A1OTEyMTE3LDE4NzMzNTc1MzMsMjA1ODI5NDkxNiwzNjQ3NDAz
+MjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4NzYxXX
+0=
 -->
