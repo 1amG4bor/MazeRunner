@@ -55,7 +55,7 @@ If you want to try game the following information could be helpful.
  - [ ] ... and so much more :)
 
 ## Author:  'G4bor'
-I will continue the project just in my freetime
+***I will continue the project in my freetime, so... sometime it's worth coming back and check*** 
 
 ### Source:
 
@@ -67,9 +67,9 @@ I will continue the project just in my freetime
  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcwMTQ1MzIxLDE0Nzc0MzQ1MTIsMjU5Mz
-M4NzU2LDEwNjk0NDE1MjcsMTM0MjM4NDMyMSwxMjEzODg2NTYw
-LDE2MDMyNzMwNDksMTgzMTM0NzI2MCwtMTkwNTkxMjExNywxOD
-czMzU3NTMzLDIwNTgyOTQ5MTYsMzY0NzQwMzI4LDEwODI0MDIy
-OTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2MV19
+eyJoaXN0b3J5IjpbLTEzNjQyMzA4MTgsMTQ3NzQzNDUxMiwyNT
+kzMzg3NTYsMTA2OTQ0MTUyNywxMzQyMzg0MzIxLDEyMTM4ODY1
+NjAsMTYwMzI3MzA0OSwxODMxMzQ3MjYwLC0xOTA1OTEyMTE3LD
+E4NzMzNTc1MzMsMjA1ODI5NDkxNiwzNjQ3NDAzMjgsMTA4MjQw
+MjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4NzYxXX0=
 -->
