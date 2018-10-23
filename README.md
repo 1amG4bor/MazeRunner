@@ -36,6 +36,7 @@ If you want to try game the following information could be helpful.
  - [x] Refactor the whole project & create MVP-model for the next generation display
  - [x] Create 'Factories' to make the board and the  characters
  - [x] Implement minimal AI to create moving and fighting behavior for the enemy non-player character.
+ - [x] Animate the moving and fighting
  - [x] Draw the map and characters with Java Swing API (top-down view)
  - [x] New Graphics design (avatar + HUD / new textures)
  - [x] More and more behavior pattern for NPC
@@ -62,7 +63,7 @@ If you want to try game the following information could be helpful.
  - http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNDc0OTU5MywxMzQyMzg0MzIxLDEyMT
+eyJoaXN0b3J5IjpbMTA2OTQ0MTUyNywxMzQyMzg0MzIxLDEyMT
 M4ODY1NjAsMTYwMzI3MzA0OSwxODMxMzQ3MjYwLC0xOTA1OTEy
 MTE3LDE4NzMzNTc1MzMsMjA1ODI5NDkxNiwzNjQ3NDAzMjgsMT
 A4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4NzYxXX0=
