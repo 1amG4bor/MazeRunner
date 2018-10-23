@@ -19,14 +19,22 @@ If you want to try game the following information could be helpful.
  - Audacity
 ## Evolution (versions)
 1. Terminal/Console version
+
 ![enter image description here](https://lh3.googleusercontent.com/g3VFal-u16ck0HmJp6l0aNO1udRLTSFcETsETgvUZE_cPyNdS7fTC1ETxk4dXIuPAbUjgJ23q0uk "First version &#40;v-0.01&#41;")
+
 2. Basic window app (Java 2D-graphics)
+
 ![enter image description here](https://lh3.googleusercontent.com/1RbK8zzNRatq1NsrlBrmSTNhYIi4PADGFs0j5wQ0lgA5UcA_M5MeEG2_nAhS6GYR5x6gj0kdxSJU "Second version &#40;v-0.1&#41;")
+
 3. Full-screen app (Java Swing)
 *The version for live presentation in 'Flow Academy'*
+
 ![enter image description here](https://lh3.googleusercontent.com/uSLD3vCZe8Cx3fH2pbIM399TYBfzx_T-PnxgLL7l-1r62CfYOOzHxuLlaFzT6GAdgaw_Myxg3BHw "Main menu")
 
+
 ![enter image description here](https://lh3.googleusercontent.com/j8-iPGlXanTJkKvsgXPINw71unLcAYjdQtgJ9RWrf__7jpWxnXMWzhjIkpeGCmCEaXf-P7btW7FT "Fight in the maze &#40;screenshot&#41;")
+
+
 
 ## Backlog to Feature
 
@@ -70,7 +78,7 @@ If you want to try game the following information could be helpful.
  *Thank you for coming and read me :)
  I hope you enjoyed it and come back for the latest news*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NjYxNTc5OCwtMzcwNDcwNjA2LDUwMD
+eyJoaXN0b3J5IjpbMTgwOTM1MzExNCwtMzcwNDcwNjA2LDUwMD
 MwNzkyNywxNDc3NDM0NTEyLDI1OTMzODc1NiwxMDY5NDQxNTI3
 LDEzNDIzODQzMjEsMTIxMzg4NjU2MCwxNjAzMjczMDQ5LDE4Mz
 EzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0
