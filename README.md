@@ -43,7 +43,7 @@ If you want to try game the following information could be helpful.
  - [x] Different enemy types
  - [x] Create fight-system (close-combat)
  - [ ] in-game menu & own message-box
- - [ ] Items, 
+ - [ ] Items, boxes, weapons and backpack
  - [ ] Keys and switches to open doors / switch off traps
  - [ ] music & sound effects
  - [ ] load / save game
@@ -70,10 +70,10 @@ If you want to try game the following information could be helpful.
  *Thank you for coming and read me :)
  I hope you enjoyed it and come back for the latest news*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ4NTY4ODAzLC0zNzA0NzA2MDYsNTAwMz
-A3OTI3LDE0Nzc0MzQ1MTIsMjU5MzM4NzU2LDEwNjk0NDE1Mjcs
-MTM0MjM4NDMyMSwxMjEzODg2NTYwLDE2MDMyNzMwNDksMTgzMT
-M0NzI2MCwtMTkwNTkxMjExNywxODczMzU3NTMzLDIwNTgyOTQ5
-MTYsMzY0NzQwMzI4LDEwODI0MDIyOTIsLTE5OTg5MjkzMjUsMT
-A3OTAwODc2MV19
+eyJoaXN0b3J5IjpbMjA3NjYxNTc5OCwtMzcwNDcwNjA2LDUwMD
+MwNzkyNywxNDc3NDM0NTEyLDI1OTMzODc1NiwxMDY5NDQxNTI3
+LDEzNDIzODQzMjEsMTIxMzg4NjU2MCwxNjAzMjczMDQ5LDE4Mz
+EzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0
+OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LD
+EwNzkwMDg3NjFdfQ==
 -->
