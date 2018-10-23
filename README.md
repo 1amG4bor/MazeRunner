@@ -60,13 +60,13 @@ If you want to try game the following information could be helpful.
 
  - Wall & floor textures based on: **art by Daniel Cook (Lostgarden.com)**
  - Characters: **http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/**
- - 
+ *and some more:*
  - https://opengameart.org/content/ui-button
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MDI3NTY5MiwyNTkzMzg3NTYsMTA2OT
-Q0MTUyNywxMzQyMzg0MzIxLDEyMTM4ODY1NjAsMTYwMzI3MzA0
-OSwxODMxMzQ3MjYwLC0xOTA1OTEyMTE3LDE4NzMzNTc1MzMsMj
-A1ODI5NDkxNiwzNjQ3NDAzMjgsMTA4MjQwMjI5MiwtMTk5ODky
-OTMyNSwxMDc5MDA4NzYxXX0=
+eyJoaXN0b3J5IjpbNDEyNzY1NTEzLDI1OTMzODc1NiwxMDY5ND
+QxNTI3LDEzNDIzODQzMjEsMTIxMzg4NjU2MCwxNjAzMjczMDQ5
+LDE4MzEzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMD
+U4Mjk0OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5
+MzI1LDEwNzkwMDg3NjFdfQ==
 -->
