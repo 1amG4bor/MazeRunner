@@ -55,20 +55,21 @@ If you want to try game the following information could be helpful.
  - [ ] ... and so much more :)
 
 ## Author:  'G4bor'
+I will continue the project just in my freetime
 
 ### Source:
 
  - Wall & floor textures based on: **art by Daniel Cook (Lostgarden.com)**
- - Characters: **http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/**
+ - Characters: http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/
  *and some more:*
  - https://opengameart.org/content/ui-button
  - https://opengameart.org/content/rts-status-indicator
- - 
+ 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NzQzNDUxMiwyNTkzMzg3NTYsMTA2OT
-Q0MTUyNywxMzQyMzg0MzIxLDEyMTM4ODY1NjAsMTYwMzI3MzA0
-OSwxODMxMzQ3MjYwLC0xOTA1OTEyMTE3LDE4NzMzNTc1MzMsMj
-A1ODI5NDkxNiwzNjQ3NDAzMjgsMTA4MjQwMjI5MiwtMTk5ODky
-OTMyNSwxMDc5MDA4NzYxXX0=
+eyJoaXN0b3J5IjpbMzcwMTQ1MzIxLDE0Nzc0MzQ1MTIsMjU5Mz
+M4NzU2LDEwNjk0NDE1MjcsMTM0MjM4NDMyMSwxMjEzODg2NTYw
+LDE2MDMyNzMwNDksMTgzMTM0NzI2MCwtMTkwNTkxMjExNywxOD
+czMzU3NTMzLDIwNTgyOTQ5MTYsMzY0NzQwMzI4LDEwODI0MDIy
+OTIsLTE5OTg5MjkzMjUsMTA3OTAwODc2MV19
 -->
