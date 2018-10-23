@@ -55,7 +55,7 @@ If you want to try game the following information could be helpful.
  - [ ] ... and so much more :)
 
 ## Author:  'G4bor'
-***I will continue the project in my free time, so... sometimes it's worth looking back and check there is a new development!*** 
+***I will continue the project in my free time, so... sometimes it's worth looking back and check the new developments.*** 
 
 ### Source:
 
@@ -69,10 +69,10 @@ If you want to try game the following information could be helpful.
  *Thank you for coming and read me :)
  I hope you enjoyed it and come back for the latest news*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDI1MzIwNjQsLTM3MDQ3MDYwNiw1MD
-AzMDc5MjcsMTQ3NzQzNDUxMiwyNTkzMzg3NTYsMTA2OTQ0MTUy
-NywxMzQyMzg0MzIxLDEyMTM4ODY1NjAsMTYwMzI3MzA0OSwxOD
-MxMzQ3MjYwLC0xOTA1OTEyMTE3LDE4NzMzNTc1MzMsMjA1ODI5
-NDkxNiwzNjQ3NDAzMjgsMTA4MjQwMjI5MiwtMTk5ODkyOTMyNS
-wxMDc5MDA4NzYxXX0=
+eyJoaXN0b3J5IjpbMTkyOTI1MjE4NCwtMzcwNDcwNjA2LDUwMD
+MwNzkyNywxNDc3NDM0NTEyLDI1OTMzODc1NiwxMDY5NDQxNTI3
+LDEzNDIzODQzMjEsMTIxMzg4NjU2MCwxNjAzMjczMDQ5LDE4Mz
+EzNDcyNjAsLTE5MDU5MTIxMTcsMTg3MzM1NzUzMywyMDU4Mjk0
+OTE2LDM2NDc0MDMyOCwxMDgyNDAyMjkyLC0xOTk4OTI5MzI1LD
+EwNzkwMDg3NjFdfQ==
 -->
