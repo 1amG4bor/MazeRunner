@@ -57,10 +57,12 @@ If you want to try game the following information could be helpful.
 
 ### Source:
 
- - List item
+ - 
+ - 
+ - http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4ODgyNzAxMSwxMzQyMzg0MzIxLDEyMT
+eyJoaXN0b3J5IjpbMTUzNDc0OTU5MywxMzQyMzg0MzIxLDEyMT
 M4ODY1NjAsMTYwMzI3MzA0OSwxODMxMzQ3MjYwLC0xOTA1OTEy
 MTE3LDE4NzMzNTc1MzMsMjA1ODI5NDkxNiwzNjQ3NDAzMjgsMT
 A4MjQwMjI5MiwtMTk5ODkyOTMyNSwxMDc5MDA4NzYxXX0=
