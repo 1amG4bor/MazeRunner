@@ -55,7 +55,7 @@ If you want to try game the following information could be helpful.
  - [ ] ... and so much more :)
 
 ## Author:  'G4bor'
-***I will continue the project in my freetime, so... sometime it's worth looking back and check  the news!*** 
+***I will continue the project in my freetime, so... sometime it's worth looking back and check there is new development!*** 
 
 ### Source:
 
@@ -69,7 +69,7 @@ If you want to try game the following information could be helpful.
  *Thank you for coming and read me :)
  I hope you enjoyed it and come back for the latest news*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODk3NDc1NSw1MDAzMDc5MjcsMTQ3Nz
+eyJoaXN0b3J5IjpbLTM3MDQ3MDYwNiw1MDAzMDc5MjcsMTQ3Nz
 QzNDUxMiwyNTkzMzg3NTYsMTA2OTQ0MTUyNywxMzQyMzg0MzIx
 LDEyMTM4ODY1NjAsMTYwMzI3MzA0OSwxODMxMzQ3MjYwLC0xOT
 A1OTEyMTE3LDE4NzMzNTc1MzMsMjA1ODI5NDkxNiwzNjQ3NDAz
